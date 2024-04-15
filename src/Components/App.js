@@ -13,13 +13,12 @@ function App() {
     return (
         <div>
             <header>
-                <h1>Placeholder</h1>
+                {/* <h1>Placeholder</h1> */}
                 <Navbar />
             </header>
 
             <div className="page-container">
                 <div className="content-wrap">
-
                     <main>
                         <Routes>
                             <Route index element={<Home />} />
@@ -31,7 +30,7 @@ function App() {
                         </Routes>
                     </main>
                 </div>
-                <footer>
+                <footer className="footer">
                     <p>&copy; placeholder</p>
                 </footer>
             </div>
