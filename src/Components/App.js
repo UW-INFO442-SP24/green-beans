@@ -13,7 +13,6 @@ function App() {
     return (
         <div>
             <header>
-                {/* <h1>Placeholder</h1> */}
                 <Navbar />
             </header>
 
