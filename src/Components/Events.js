@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Search from './Search';
 
 function CreateCard({ eventName }) {
     return (
@@ -9,22 +10,35 @@ function CreateCard({ eventName }) {
     )
 }
 
+// For search
+function getFilteredEvents(query, items) {
+    if (!query) {
+        return items;
+    }
+    return items.filter(event => event.event_name.toLowerCase().includes(query.toLowerCase()));
+}
+
 function Events({ tempData }) {
+    // for search
+    const [query, setQuery] = useState("");
+    const filteredEvents = getFilteredEvents(query, tempData.events);
+
     const eventNames = tempData.events.map(event => {
         return event.event_name;
     });
 
     return (
-        <div className="eventCards">
-            {/* Search/filter feature */}
+        <div className="eventPage">
+            <Search query={query} setQuery={setQuery} tempData={tempData} />
 
+            <div className="eventCards">
+                {
+                    filteredEvents.map(event => (
+                        <CreateCard key={event.event_id} eventName={event.event_name} />
+                    ))
+                }
 
-            {
-                eventNames.map(eventName => (
-                    <CreateCard key={eventName} eventName={eventName} />
-                ))
-            }
-
+            </div>
         </div>
     )
 }
