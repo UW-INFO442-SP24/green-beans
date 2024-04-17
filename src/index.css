@@ -18,6 +18,8 @@
 
 /* Global styling for Mobile (less than 598px) devices */
 
+
+
 /* Events */
 .eventCards {
     display: flex;
@@ -63,8 +65,25 @@
 }
 
 /* navbar */
+body {
+    margin-top: 80px;
+    padding: 30px;
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    box-shadow: 0 0 10px 0 black;
+}
+
 .nav {
     display: flex;
+    align-items: center;
+    height: 80px;
 }
 
 .nav-logo {
@@ -72,12 +91,12 @@
 }
 
 .nav-logo img {
-    max-width: 100px;
-    max-height: 100px;
+    max-height: 80px;
+    margin-left: 40px;
 }
 
 .nav-item {
-    padding-right: 30px;
+    margin: 0 20px;
 }
 
 
