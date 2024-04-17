@@ -7,9 +7,9 @@ function About() {
             <div className="topImgContainer">
                 <img src={aestheticImg} alt="aestheticImg" className="aestheticImg" />
             </div>
-            <div className="bottomImgContainer">
+            <div className="bottomContainer">
                 <img src={aestheticImg} alt="aestheticImg" className="bottomContainerItem" />
-                <img src={aestheticImg} alt="aestheticImg" className="bottomContainerItem" />
+                <div className="bottomContainerItem">a descriptive paragraph</div>
             </div>
         </div>
     )
