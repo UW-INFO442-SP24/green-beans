@@ -21,6 +21,48 @@
 
 
 /* Global styling for Mobile (less than 598px) devices */
+.eventCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* About */
+.topImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    height: 35vh;
+    border-radius: 15px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.bottomImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    height: 35vh;
+    overflow: hidden;
+    gap: 5%;
+}
+
+.bottomContainerItem {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.aestheticImg {
+    width: 100%;
+    height: 100%;
+}
 
 /* navbar */
 .nav {
@@ -39,6 +81,7 @@
 .nav-item {
     padding-right: 30px;
 }
+
 
 /* Media */
 @media (min-width: 598px) {}

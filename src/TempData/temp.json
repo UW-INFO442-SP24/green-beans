@@ -1,0 +1,36 @@
+{
+    "events": [
+        {
+            "event_id": 1,
+            "event_name": "Urban Trends Flea",
+            "location": "Centerville Community Park",
+            "date": "2024-05-15",
+            "time": "10:00 AM - 5:00 PM",
+            "description": "Explore the latest in urban fashion with over 100 local vendors showcasing their unique clothing and accessories."
+        },
+        {
+            "event_id": 2,
+            "event_name": "Vintage Vogue Market",
+            "location": "Downtown Plaza",
+            "date": "2024-06-20",
+            "time": "11:00 AM - 6:00 PM",
+            "description": "A celebration of vintage and retro styles, featuring exclusive collections from vintage enthusiasts across the region."
+        },
+        {
+            "event_id": 3,
+            "event_name": "Eco Fashion Fair",
+            "location": "Riverfront Exhibition Space",
+            "date": "2024-07-05",
+            "time": "09:00 AM - 4:00 PM",
+            "description": "A sustainable fashion event promoting eco-friendly clothing and accessories from innovative green designers."
+        },
+        {
+            "event_id": 4,
+            "event_name": "Designer Pop-Up Bazaar",
+            "location": "The Old Warehouse",
+            "date": "2024-08-10",
+            "time": "12:00 PM - 8:00 PM",
+            "description": "An exclusive event for fashionistas to purchase unique pieces directly from up-and-coming designers."
+        }
+    ]
+}

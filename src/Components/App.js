@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './Nav';
 import { Route, Routes } from 'react-router-dom';
 
+import tempData from '../TempData/temp.json';
+
 import Home from './Home';
 import Events from './Events';
 import Stores from './Stores';
@@ -21,7 +23,7 @@ function App() {
                     <main>
                         <Routes>
                             <Route index element={<Home />} />
-                            <Route path="events" element={<Events />} />
+                            <Route path="events" element={<Events tempData={tempData} />} />
                             <Route path="stores" element={<Stores />} />
                             <Route path="quiz" element={<Quiz />} />
                             <Route path="about" element={<About />} />
