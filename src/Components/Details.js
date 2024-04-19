@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import tempData from '../TempData/temp.json';
+import tempImg from '../images/youaremysunshine.jpg';
+import { useNavigate } from "react-router-dom";
 
 function Details({ showDetailFor }) {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (showDetailFor === "") {
+            navigate("/");
+        }
+    }, []);
+
     const displayedData = tempData.events.filter((event) => {
         return event.event_name === showDetailFor;
     });
 
     return (
-        <div>{displayedData.map((event) => (
-            <div>
-                <h2>{event.event_name}</h2>
-                <p>{event.description}</p>
-                <h4>location: {event.location}</h4>
-                <h5>date: {event.date}</h5>
-                <h5>time: {event.time}</h5>
-            </div>
-        ))}</div>
-    )
+        <div className="details">
+            <img src={tempImg} alt="tempImg" />
+            {displayedData.map((event) => (
+                <div className="contentContainer">
+                    <h2>{event.event_name}</h2>
+                    <p>{event.description}</p>
+                    <p>location: {event.location}</p>
+                    <p>date: {event.date}</p>
+                    <p>time: {event.time}</p>
+                </div>
+            ))}
+        </div>
+    );
 }
 
 export default Details;

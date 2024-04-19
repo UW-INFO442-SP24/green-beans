@@ -105,10 +105,29 @@ header {
     margin: 0 20px;
 }
 
+/* Details */
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 
 /* Media */
 @media (min-width: 598px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .details {
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 75vh;
+    }
+
+    .details .contentContainer {
+        text-align: left;
+        max-width: 60%;
+    }
+}
 
 @media (min-width: 992px) {}
