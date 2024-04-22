@@ -25,13 +25,14 @@ Thrift Titans is a web application aimed to help budget-conscious Gen Z students
 
 
 ## Development
+Thrift Titans is constructed with:
 
-Javascript
-CSS
-HTML
-Bootstrap
-React
-Firebase
+* Javascript
+* CSS
+* HTML
+* Bootstrap
+* React
+* Firebase
 
 ## References
-
+* N/A
