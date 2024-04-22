@@ -9,9 +9,11 @@ Thrift Titans is a web application aimed to help budget-conscious Gen Z students
 
 * Home Page
 * Event Page
+	* Event Search
 	* Event Filter
 * Store Page
-	* Store Filter
+	* Store Search
+ 	* Store Filter
 * About Page
 * Quiz Page
 
