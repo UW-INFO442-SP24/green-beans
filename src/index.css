@@ -114,6 +114,10 @@ header {
     justify-content: center;
 }
 
+.details img {
+    max-width: 35%;
+}
+
 /* Media */
 @media (min-width: 598px) {}
 

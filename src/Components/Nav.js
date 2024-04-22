@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from '../images/youaremysunshine.jpg';
+import logoImg from '../images/tempimg.jpeg';
 
 function Navbar() {
     return (

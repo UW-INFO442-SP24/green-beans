@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import tempData from '../TempData/temp.json';
-import tempImg from '../images/youaremysunshine.jpg';
+import tempImg from '../images/tempimg.jpeg';
 import { useNavigate } from "react-router-dom";
 
 function Details({ showDetailFor }) {
