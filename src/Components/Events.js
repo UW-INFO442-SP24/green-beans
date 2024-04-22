@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
-function CreateCard({ eventName, setShowDetailFor }) {
+function CreateCard({ event_id, eventName }) {
 
     const navigate = useNavigate();
 
     function handleClick() {
-        setShowDetailFor(eventName);
-        navigate("/details");
+        navigate("/events/" + event_id);
+
     }
 
     return (
@@ -27,14 +27,10 @@ function getFilteredEvents(query, items) {
     return items.filter(event => event.event_name.toLowerCase().includes(query.toLowerCase()));
 }
 
-function Events({ tempData, setShowDetailFor }) {
+function Events({ tempData }) {
     // for search
     const [query, setQuery] = useState("");
     const filteredEvents = getFilteredEvents(query, tempData.events);
-
-    // const eventNames = tempData.events.map(event => {
-    //     return event.event_name;
-    // });
 
     return (
         <div className="eventPage">
@@ -43,7 +39,7 @@ function Events({ tempData, setShowDetailFor }) {
             <div className="eventCards">
                 {
                     filteredEvents.map(event => (
-                        <CreateCard key={event.event_id} eventName={event.event_name} setShowDetailFor={setShowDetailFor} />
+                        <CreateCard key={event.event_id} event_id={event.event_id} eventName={event.event_name} />
                     ))
                 }
 

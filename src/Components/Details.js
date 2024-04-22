@@ -1,19 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import tempData from '../TempData/temp.json';
 import tempImg from '../images/tempimg.jpeg';
-import { useNavigate } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-function Details({ showDetailFor }) {
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        if (showDetailFor === "") {
-            navigate("/");
-        }
-    }, []);
-
+function Details() {
+    const { eventId } = useParams();
     const displayedData = tempData.events.filter((event) => {
-        return event.event_name === showDetailFor;
+        return Number(event.event_id) === Number(eventId);
     });
 
     return (
