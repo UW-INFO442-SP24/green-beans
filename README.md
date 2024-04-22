@@ -9,8 +9,7 @@ Thrift Titans is a web application aimed to help budget-conscious Gen Z students
 
 * Home Page
 * Event Page
-	*Displays detailed information about events taking place in Seattle, including flea markets, pop-ups, and swap-meets.
-* Event Filter
+	* Event Filter
 * Store Page
 * Store Filter
 * About Page
