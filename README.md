@@ -17,11 +17,11 @@ Thrift Titans is a web application aimed to help budget-conscious Gen Z students
 * Quiz Page
 
 ## Group Members
-Justin Le
-Yohan Lee
-Tiffany Lu
-Chantalle Matro
-Ella Gabrielle Uchtmann
+* Justin Le
+* Yohan Lee
+* Tiffany Lu
+* Chantalle Matro
+* Ella Gabrielle Uchtmann
 
 
 ## Development
