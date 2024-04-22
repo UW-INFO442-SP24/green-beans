@@ -1,5 +1,5 @@
 # Thrift Titans
-Our published site can be viewed here: https://info442-green-beans.web.app/
+Our published site can be viewed here: [Thrift Titans](https://info442-green-beans.web.app/)
 
 ## Our Mission
 
