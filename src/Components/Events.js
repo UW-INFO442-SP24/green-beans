@@ -14,7 +14,7 @@ function CreateCard({ event_id, eventName }) {
     return (
         <div className="card">
             <p>{eventName}</p>
-            <button key={eventName} className="btn btn-primary" onClick={handleClick}>More Details</button>
+            <button key={event_id} className="btn btn-primary" onClick={handleClick}>More Details</button>
         </div>
     )
 }

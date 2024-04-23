@@ -3,7 +3,7 @@ import tempData from '../TempData/temp.json';
 import tempImg from '../images/tempimg.jpeg';
 import { useParams } from 'react-router-dom';
 
-function Details() {
+function EventDetails() {
     const { eventId } = useParams();
     const displayedData = tempData.events.filter((event) => {
         return Number(event.event_id) === Number(eventId);
@@ -25,4 +25,4 @@ function Details() {
     );
 }
 
-export default Details;
+export default EventDetails;

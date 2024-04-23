@@ -32,5 +32,39 @@
             "time": "12:00 PM - 8:00 PM",
             "description": "An exclusive event for fashionistas to purchase unique pieces directly from up-and-coming designers."
         }
+    ],
+    "stores": [
+        {
+            "store_id": 1,
+            "store_name": "store 1",
+            "location": "store 1 loc",
+            "date": "2024-05-15",
+            "time": "10:00 AM - 5:00 PM",
+            "description": "Explore the latest in urban fashion with over 100 local vendors showcasing their unique clothing and accessories."
+        },
+        {
+            "store_id": 2,
+            "store_name": "store 2",
+            "location": "store 2 loc",
+            "date": "2024-06-20",
+            "time": "11:00 AM - 6:00 PM",
+            "description": "A celebration of vintage and retro styles, featuring exclusive collections from vintage enthusiasts across the region."
+        },
+        {
+            "store_id": 3,
+            "store_name": "store 3",
+            "location": "store 3 loc",
+            "date": "2024-07-05",
+            "time": "09:00 AM - 4:00 PM",
+            "description": "A sustainable fashion event promoting eco-friendly clothing and accessories from innovative green designers."
+        },
+        {
+            "store_id": 4,
+            "store_name": "store 4",
+            "location": "store 4 loc",
+            "date": "2024-08-10",
+            "time": "12:00 PM - 8:00 PM",
+            "description": "An exclusive event for fashionistas to purchase unique pieces directly from up-and-coming designers."
+        }
     ]
 }
