@@ -1,5 +1,5 @@
 import React from 'react';
-import aestheticImg from '../images/tempimg.jpeg';
+import aestheticImg from '../images/background.png';
 
 function About() {
     return (

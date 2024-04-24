@@ -1,6 +1,6 @@
 import React from 'react';
 import tempData from '../TempData/temp.json';
-import tempImg from '../images/tempimg.jpeg';
+import tempImg from '../images/background.png';
 import { useParams } from 'react-router-dom';
 
 function StoreDetails() {

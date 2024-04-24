@@ -18,7 +18,29 @@
 
 /* Global styling for Mobile (less than 598px) devices */
 
+/* Home */
+.homeContainer {
+    /* background-image: url('images/background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 66.64%; */
 
+    position: relative;
+    text-align: center;
+}
+
+.homeContainer img {
+    width: 100%;
+}
+
+.homeContainer .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* Events */
 .eventCards {
@@ -72,34 +94,46 @@
 /* navbar */
 body {
     margin-top: 80px;
-    padding: 30px;
+    padding: 3%;
+    padding-top: 0;
 }
 
 header {
-    background-color: white;
-    position: fixed;
+    background-color: transparent;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 80px;
-    box-shadow: 0 0 10px 0 black;
-    z-index: 1000;
+    /* box-shadow: 0 0 10px 0 black; */
+    /* z-index: 1000; */
 }
 
 .nav {
+    background-color: transparent;
     display: flex;
     align-items: center;
     height: 80px;
+    text-decoration: none;
+}
+
+.text-decoration-none {
+    color: black;
+}
+
+.text-decoration-none:hover {
+    color: grey;
 }
 
 .nav-logo {
     margin-right: auto;
+    margin-left: 5%;
 }
 
-.nav-logo img {
+/* .nav-logo img {
     max-height: 80px;
     margin-left: 40px;
-}
+} */
 
 .nav-item {
     margin: 0 20px;

@@ -7,7 +7,7 @@ function Navbar() {
         <div>
             <nav>
                 <ul className="nav">
-                    <li className="nav-logo"><Link className="text-decoration-none" to="/" ><img src={logoImg} alt="logo" /></Link></li>
+                    <li className="nav-logo"><Link className="text-decoration-none" to="/" >Thrift Titans</Link></li>
                     <li className="nav-item"><Link className="text-decoration-none" to="/events" >Events</Link></li>
                     <li className="nav-item"><Link className="text-decoration-none" to="/stores" >Stores</Link></li>
                     <li className="nav-item"><Link className="text-decoration-none" to="/quiz" >Quiz</Link></li>
