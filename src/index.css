@@ -18,21 +18,28 @@
 
 /* Global styling for Mobile (less than 598px) devices */
 
+body {
+    /* For nav */
+    margin-top: 80px;
+    padding: 3%;
+    padding-top: 0;
+}
+
 /* Home */
 .homeContainer {
-    /* background-image: url('images/background.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 66.64%; */
-
     position: relative;
     text-align: center;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
 }
 
 .homeContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
 }
 
 .homeContainer .centered {
@@ -58,7 +65,7 @@
     margin: 5%;
     height: 35vh;
     border-radius: 15px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     overflow: hidden;
 }
 
@@ -75,9 +82,9 @@
 .bottomContainerItem {
     flex: 1;
     height: 100%;
-    width: 100%;
+    width: 40%;
     border-radius: 10px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     box-sizing: border-box;
     margin: 0;
     display: flex;
@@ -92,12 +99,6 @@
 }
 
 /* navbar */
-body {
-    margin-top: 80px;
-    padding: 3%;
-    padding-top: 0;
-}
-
 header {
     background-color: transparent;
     position: absolute;
@@ -115,6 +116,8 @@ header {
     align-items: center;
     height: 80px;
     text-decoration: none;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .text-decoration-none {
@@ -127,7 +130,7 @@ header {
 
 .nav-logo {
     margin-right: auto;
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
 /* .nav-logo img {
@@ -153,7 +156,11 @@ header {
 }
 
 /* Media */
-@media (min-width: 598px) {}
+@media (min-width: 598px) {
+    .homeContainer {
+        padding-top: 45%;
+    }
+}
 
 @media (min-width: 768px) {
     .details {
@@ -165,6 +172,10 @@ header {
     .details .contentContainer {
         text-align: left;
         max-width: 60%;
+    }
+
+    .homeContainer {
+        padding-top: 35%;
     }
 }
 

@@ -8,6 +8,9 @@ function Home() {
                 <img src={background} alt="background" />
                 <div className='centered'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
             </div>
+            <div className="homeContainer">
+                <div className='centered'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>
+            </div>
         </div>
     )
 }
