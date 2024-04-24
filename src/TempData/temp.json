@@ -66,5 +66,23 @@
             "time": "12:00 PM - 8:00 PM",
             "description": "An exclusive event for fashionistas to purchase unique pieces directly from up-and-coming designers."
         }
+    ],
+    "descriptions": [
+        {
+            "tab_name": "stores",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        },
+        {
+            "tab_name": "events",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        },
+        {
+            "tab_name": "quiz",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        },
+        {
+            "tab_name": "about",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        }
     ]
 }

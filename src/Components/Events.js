@@ -8,7 +8,6 @@ function CreateCard({ event_id, eventName }) {
 
     function handleClick() {
         navigate("/events/" + event_id);
-
     }
 
     return (
