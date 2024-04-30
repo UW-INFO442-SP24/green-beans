@@ -10,6 +10,7 @@ function Quiz() {
     });
     const [showResult, setShowResult] = useState(false);
     const [selectedAnswerIdx, setSelectedAnswerIdx] = useState(null);
+    const [started, setStarted] = useState(false);
 
     const questions = tempData.quiz;
     const { question, answers, correct_answer } = questions[activeQuestion];
@@ -62,7 +63,17 @@ function Quiz() {
     }
 
     function RenderQuizOrResult() {
-        if (!showResult) {
+
+        if (!started) {
+            return (
+                <div className="quiz-intro-container">
+                    <h1>Quiz</h1>
+                    <p>Our quiz can tell you what type of stores best fit your preferences!
+                        Click the “Start Quiz” button to get started!</p>
+                    <button onClick={handleStart}>Start Quiz</button>
+                </div>
+            )
+        } else if (!showResult) {
             return (
                 <div className="quiz-container">
                     <h1>Quiz</h1>
@@ -89,13 +100,31 @@ function Quiz() {
                     <p>
                         Wrong Answers:<span> {result.wrongAnswers}</span>
                     </p>
+                    <button onClick={handleRestart}>Restart Quiz</button>
                 </div>
             )
         }
     }
 
+    function handleStart() {
+        setStarted(true);
+    }
+
+    function handleRestart() {
+        setActiveQuestion(0);
+        setSelectedAnswer('');
+        setResult({
+            correctAnswers: 0,
+            wrongAnswers: 0
+        })
+        setShowResult(false);
+        setSelectedAnswerIdx(null)
+    }
+
     return (
-        <RenderQuizOrResult />
+        <div className="quiz-page-container">
+            <RenderQuizOrResult />
+        </div>
     );
 }
 
