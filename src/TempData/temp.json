@@ -84,5 +84,34 @@
             "tab_name": "about",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
         }
+    ],
+    "quiz": [
+        {
+            "question": "question 1",
+            "answers": [
+                "q 1 option a",
+                "q 1 option b",
+                "q 1 option c"
+            ],
+            "correct_answer": "q 1 option a"
+        },
+        {
+            "question": "question 2",
+            "answers": [
+                "q 2 option a",
+                "q 2 option b",
+                "q 2 option c"
+            ],
+            "correct_answer": "q 2 option a"
+        },
+        {
+            "question": "question 3",
+            "answers": [
+                "q 3 option a",
+                "q 3 option b",
+                "q 3 option c"
+            ],
+            "correct_answer": "q 3 option a"
+        }
     ]
 }
