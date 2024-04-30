@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import tempData from '../TempData/temp.json';
+import background from '../images/background.png'
 
 function Quiz() {
     const [activeQuestion, setActiveQuestion] = useState(0);
@@ -63,14 +64,20 @@ function Quiz() {
     }
 
     function RenderQuizOrResult() {
-
         if (!started) {
             return (
-                <div className="quiz-intro-container">
-                    <h1>Quiz</h1>
-                    <p>Our quiz can tell you what type of stores best fit your preferences!
-                        Click the “Start Quiz” button to get started!</p>
-                    <button onClick={handleStart}>Start Quiz</button>
+                <div className="home">
+                    <div className="homeContainer">
+                        <img src={background} alt="background" />
+                        <div className="centered">
+                            <h1>QUIZ</h1>
+                            <p>Our quiz can tell you what type of stores best fit your preferences!
+                                Click the “Start Quiz” button to get started!</p>
+                        </div>
+                    </div>
+                    <div className="homeContainer">
+                        <button type="button" className="btn btn-light btn-lg centered" onClick={handleStart}>Start Quiz</button>
+                    </div>
                 </div>
             )
         } else if (!showResult) {
