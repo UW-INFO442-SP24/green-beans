@@ -1,6 +1,5 @@
 import React from 'react';
 import background from '../images/background.png'
-import tempData from '../TempData/temp.json'
 import { useNavigate } from "react-router-dom";
 
 function CreateCards({ tab_name, description }) {
@@ -19,7 +18,7 @@ function CreateCards({ tab_name, description }) {
     )
 }
 
-function Home() {
+function Home({ data }) {
     return (
         <div className="home">
             <div className="topHalf">
@@ -35,7 +34,7 @@ function Home() {
                 <p className="whatCanIDo">WHAT CAN I DO?</p>
                 <div className="homeCardContainer">
                     {
-                        tempData.descriptions.map(tab => (
+                        data.descriptions.map(tab => (
                             <CreateCards key={tab.tab_name} tab_name={tab.tab_name} description={tab.description} />
                         ))
                     }

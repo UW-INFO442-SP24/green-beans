@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import tempData from '../TempData/temp.json';
 import background from '../images/background.png'
 
-function Quiz() {
+function Quiz({ data }) {
     const [activeQuestion, setActiveQuestion] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState('');
     const [result, setResult] = useState({
@@ -13,7 +12,7 @@ function Quiz() {
     const [selectedAnswerIdx, setSelectedAnswerIdx] = useState(null);
     const [started, setStarted] = useState(false);
 
-    const questions = tempData.quiz;
+    const questions = data.quiz;
     const { question, answers, correct_answer } = questions[activeQuestion];
 
 

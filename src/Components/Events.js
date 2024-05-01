@@ -26,14 +26,14 @@ function getFilteredEvents(query, items) {
     return items.filter(event => event.event_name.toLowerCase().includes(query.toLowerCase()));
 }
 
-function Events({ tempData }) {
+function Events({ data }) {
     // for search
     const [query, setQuery] = useState("");
-    const filteredEvents = getFilteredEvents(query, tempData.events);
+    const filteredEvents = getFilteredEvents(query, data.events);
 
     return (
         <div className="eventPage">
-            <Search query={query} setQuery={setQuery} tempData={tempData} />
+            <Search query={query} setQuery={setQuery} data={data} />
 
             <div className="eventCards">
                 {

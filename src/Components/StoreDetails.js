@@ -1,11 +1,10 @@
 import React from 'react';
-import tempData from '../TempData/temp.json';
 import tempImg from '../images/background.png';
 import { useParams } from 'react-router-dom';
 
-function StoreDetails() {
+function StoreDetails({ data }) {
     const { storeId } = useParams();
-    const displayedData = tempData.stores.filter((store) => {
+    const displayedData = data.stores.filter((store) => {
         return Number(store.store_id) === Number(storeId);
     });
 

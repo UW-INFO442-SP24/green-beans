@@ -1,11 +1,10 @@
 import React from 'react';
-import tempData from '../TempData/temp.json';
 import tempImg from '../images/background.png';
 import { useParams } from 'react-router-dom';
 
-function EventDetails() {
+function EventDetails({ data }) {
     const { eventId } = useParams();
-    const displayedData = tempData.events.filter((event) => {
+    const displayedData = data.events.filter((event) => {
         return Number(event.event_id) === Number(eventId);
     });
 

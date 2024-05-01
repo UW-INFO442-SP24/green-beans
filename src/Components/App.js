@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Nav';
 import { Route, Routes } from 'react-router-dom';
-
-import tempData from '../TempData/temp.json';
 
 import Home from './Home';
 import Events from './Events';
@@ -13,7 +11,22 @@ import EventDetails from './EventDetails';
 import StoreDetails from './StoreDetails';
 import Error from './Error';
 
-function App() {
+import { onValue, ref } from 'firebase/database';
+
+function App({ database }) {
+    const [data, setData] = useState({
+        events: [],
+        stores: [],
+        descriptions: [],
+        quiz: []
+    });
+
+    useEffect(() => {
+        const dataRef = ref(database);
+        onValue(dataRef, (snapshot) => {
+            setData(snapshot.val());
+        });
+    }, [database])
 
     return (
         <div>
@@ -25,13 +38,13 @@ function App() {
                 <div className="content-wrap">
                     <main>
                         <Routes>
-                            <Route index element={<Home />} />
-                            <Route path="events" element={<Events tempData={tempData} />} />
-                            <Route path="stores" element={<Stores tempData={tempData} />} />
-                            <Route path="quiz" element={<Quiz />} />
+                            <Route index element={<Home data={data} />} />
+                            <Route path="events" element={<Events data={data} />} />
+                            <Route path="stores" element={<Stores data={data} />} />
+                            <Route path="quiz" element={<Quiz data={data} />} />
                             <Route path="about" element={<About />} />
-                            <Route path="events/:eventId" element={<EventDetails />} />
-                            <Route path="stores/:storeId" element={<StoreDetails />} />
+                            <Route path="events/:eventId" element={<EventDetails data={data} />} />
+                            <Route path="stores/:storeId" element={<StoreDetails data={data} />} />
                             <Route path="*" element={<Error />} />
                         </Routes>
                     </main>

@@ -27,14 +27,14 @@ function getFilteredStores(query, items) {
     return items.filter(store => store.store_name.toLowerCase().includes(query.toLowerCase()));
 }
 
-function Stores({ tempData }) {
+function Stores({ data }) {
     // for search
     const [query, setQuery] = useState("");
-    const filteredStores = getFilteredStores(query, tempData.stores);
+    const filteredStores = getFilteredStores(query, data.stores);
 
     return (
         <div className="eventPage">
-            <Search query={query} setQuery={setQuery} tempData={tempData} />
+            <Search query={query} setQuery={setQuery} data={data} />
 
             <div className="eventCards">
                 {
