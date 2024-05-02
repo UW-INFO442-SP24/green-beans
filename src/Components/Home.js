@@ -23,7 +23,7 @@ function Home({ data }) {
         <div className="home">
             <div className="topHalf">
                 <div className="homeContainer">
-                    <img src={background} alt="background" />
+                    <img src={green} alt="green" />
                     <div className='centered'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
                 </div>
                 <div className="homeContainer">
