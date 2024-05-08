@@ -67,7 +67,7 @@ function Quiz({ data }) {
             return (
                 <div className="home">
                     <div className="homeContainer">
-                        <img src={background} alt="background" />
+                        {/* <img src={background} alt="background" /> */}
                         <div className="centered">
                             <h1>QUIZ</h1>
                             <p>Our quiz can tell you what type of stores best fit your preferences!

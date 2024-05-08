@@ -1,5 +1,4 @@
 import React from 'react';
-import tempImg from '../images/background.png';
 import { useParams } from 'react-router-dom';
 
 function EventDetails({ data }) {
@@ -10,7 +9,7 @@ function EventDetails({ data }) {
 
     return (
         <div className="details">
-            <img src={tempImg} alt="tempImg" />
+            {/* <img src={tempImg} alt="tempImg" /> */}
             {displayedData.map((event) => (
                 <div className="contentContainer">
                     <h2>{event.event_name}</h2>

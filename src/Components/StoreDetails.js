@@ -1,5 +1,4 @@
 import React from 'react';
-import tempImg from '../images/background.png';
 import { useParams } from 'react-router-dom';
 
 function StoreDetails({ data }) {
@@ -10,7 +9,7 @@ function StoreDetails({ data }) {
 
     return (
         <div className="details">
-            <img src={tempImg} alt="tempImg" />
+            {/* <img src={tempImg} alt="tempImg" /> */}
             {displayedData.map((store) => (
                 <div className="contentContainer">
                     <h2>{store.store_name}</h2>

@@ -38,7 +38,7 @@ function App({ database }) {
                 <div className="content-wrap">
                     <main>
                         <Routes>
-                            <Route index element={<Home data={data} />} />
+                            <Route index element={<Home />} />
                             <Route path="events" element={<Events data={data} />} />
                             <Route path="stores" element={<Stores data={data} />} />
                             <Route path="quiz" element={<Quiz data={data} />} />

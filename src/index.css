@@ -19,63 +19,136 @@
 /* Global styling for Mobile (less than 598px) devices */
 
 body {
+    font-family: sans-serif, "Aclonica";
     /* For nav */
     margin-top: 80px;
-    padding: 3%;
     padding-top: 0;
-    background-color: #fefcf5;
+    background-color: #FEFCF5;
 }
 
 /* Home */
-.homeContainer {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    background-color: #fefcf5;
+.home h1 {
+    font-family: "Aclonica", sans-serif;
 }
 
-.homeContainer img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.home-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 
-.homeContainer .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.homeCardContainer {
+.home-quiz-without-arrow {
+    padding: 3%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    align-items: center;
 }
 
-.homeCard {
-    width: 45%;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 2%;
-    margin: 1%;
+.home-quiz-content {
+    text-align: left;
+    color: #5C770B;
+    margin-left: 5%;
 }
 
-.homeCard h1 {
-    text-transform: uppercase;
-    font-size: 150%;
+.home-quiz img {
+    max-width: 55%;
+}
+
+.home-quiz img.arrow {
+    width: 4%;
+}
+
+button {
+    background-color: #434834;
+    font-weight: lighter;
+    color: white;
+    border: none;
+    padding: 10px 20px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: smaller;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 15px;
 }
 
-.bottomHalf .whatCanIDo {
-    font-weight: bold;
-    margin-left: 3.33333%;
+.home-stores {
+    padding: 3%;
+    padding-bottom: 0;
+    background-color: #f2ede1;
+    text-align: left;
 }
+
+.home-stores img,
+.home-events img,
+.home-about img {
+    max-width: 53%;
+}
+
+.home-stores-without-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home-stores-content {
+    text-align: left;
+    margin-left: 4%;
+}
+
+.home-events {
+    padding: 3%;
+    padding-top: 0;
+    background-color: #f2ede1;
+    text-align: right;
+}
+
+.home-events-without-title {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.home-events-content {
+    text-align: left;
+    margin-right: 4%;
+}
+
+.home-stores h1 {
+    padding-bottom: 3%;
+    color: #434834;
+}
+
+.home-events h1 {
+    padding: 3% 0;
+    color: #434834;
+}
+
+.home-about {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 5% 3% 3% 3%;
+
+}
+
+.home-about-content {
+    text-align: center;
+    margin-right: 4%;
+}
+
+.home-stores p,
+.home-events p,
+.home-about p {
+    color: black;
+    line-height: 1.6;
+    font-weight: lighter;
+}
+
 
 /* Events */
 .eventCards {
@@ -139,8 +212,9 @@ header {
 }
 
 .nav {
-    background-color: #fefcf5;
+    background-color: #f2ede1;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     height: 80px;
     text-decoration: none;
@@ -161,10 +235,10 @@ header {
     margin-left: 2%;
 }
 
-/* .nav-logo img {
+.nav-logo img {
     max-height: 80px;
-    margin-left: 40px;
-} */
+
+}
 
 .nav-item {
     margin: 0 20px;
@@ -182,26 +256,6 @@ header {
 .details img {
     max-width: 35%;
 }
-
-/* Quiz */
-/* .quiz-intro-top {
-    background: url("./images/background.png") no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 40vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.quiz-intro-button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 15vh;
-} */
 
 /* Media */
 @media (min-width: 598px) {
@@ -224,6 +278,10 @@ header {
 
     .homeContainer {
         padding-top: 35%;
+    }
+
+    .home-quiz img.arrow {
+        width: 3%;
     }
 }
 
