@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
+import Filter from './Filter';
+import tempData from '../TempData/temp.json'
+
 function CreateCard({ store_id, storeName }) {
 
     const navigate = useNavigate();
@@ -35,6 +38,14 @@ function Stores({ data }) {
     return (
         <div className="eventPage">
             <Search query={query} setQuery={setQuery} data={data} />
+
+            <div className="filters">
+                {tempData.stores_filter.map((e) => {
+                    return (
+                        <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} />
+                    )
+                })}
+            </div>
 
             <div className="eventCards">
                 {

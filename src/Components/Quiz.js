@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import background from '../images/background.png'
+import img1 from '../images/quiz-intro-1.png';
+import img2 from '../images/quiz-intro-2.png';
+import img3 from '../images/quiz-intro-3.png';
+import img4 from '../images/quiz-intro-4.png';
 
 function Quiz({ data }) {
     const [activeQuestion, setActiveQuestion] = useState(0);
@@ -65,17 +68,23 @@ function Quiz({ data }) {
     function RenderQuizOrResult() {
         if (!started) {
             return (
-                <div className="home">
-                    <div className="homeContainer">
-                        {/* <img src={background} alt="background" /> */}
-                        <div className="centered">
-                            <h1>QUIZ</h1>
-                            <p>Our quiz can tell you what type of stores best fit your preferences!
-                                Click the “Start Quiz” button to get started!</p>
-                        </div>
+                <div className="quiz-intro-container">
+                    <div className="top-banner">
+                        <img src={img1} alt="img1" />
                     </div>
-                    <div className="homeContainer">
-                        <button type="button" className="btn btn-light btn-lg centered" onClick={handleStart}>Start Quiz</button>
+                    <div className="quiz-intro-header">
+                        <h1>DISCOVER YOUR THRIFT STYLE!</h1>
+                        <p>Find your ideal stores based on your preferences and personality!</p>
+                        <button type="button" onClick={handleStart}>Start Quiz</button>
+                    </div>
+                    <div class="image-left">
+                        <img src={img2} alt="img2" />
+                    </div>
+                    <div class="image-right">
+                        <img src={img3} alt="img3" />
+                    </div>
+                    <div class="bottom-image">
+                        <img src={img4} alt="img4" />
                     </div>
                 </div>
             )

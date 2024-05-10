@@ -1,117 +1,38 @@
 {
-    "events": [
+    "stores_filter": [
         {
-            "event_id": 1,
-            "event_name": "Urban Trends Flea",
-            "location": "Centerville Community Park",
-            "date": "2024-05-15",
-            "time": "10:00 AM - 5:00 PM",
-            "description": "Explore the latest in urban fashion with over 100 local vendors showcasing their unique clothing and accessories."
+            "filter_name": "Price",
+            "filter_options": [
+                "$",
+                "$$",
+                "$$$"
+            ]
         },
         {
-            "event_id": 2,
-            "event_name": "Vintage Vogue Market",
-            "location": "Downtown Plaza",
-            "date": "2024-06-20",
-            "time": "11:00 AM - 6:00 PM",
-            "description": "A celebration of vintage and retro styles, featuring exclusive collections from vintage enthusiasts across the region."
-        },
-        {
-            "event_id": 3,
-            "event_name": "Eco Fashion Fair",
-            "location": "Riverfront Exhibition Space",
-            "date": "2024-07-05",
-            "time": "09:00 AM - 4:00 PM",
-            "description": "A sustainable fashion event promoting eco-friendly clothing and accessories from innovative green designers."
-        },
-        {
-            "event_id": 4,
-            "event_name": "Designer Pop-Up Bazaar",
-            "location": "The Old Warehouse",
-            "date": "2024-08-10",
-            "time": "12:00 PM - 8:00 PM",
-            "description": "An exclusive event for fashionistas to purchase unique pieces directly from up-and-coming designers."
+            "filter_name": "Type",
+            "filter_options": [
+                "Vintage",
+                "Thrift",
+                "Consignment"
+            ]
         }
     ],
-    "stores": [
+    "events_filter": [
         {
-            "store_id": 1,
-            "store_name": "store 1",
-            "location": "store 1 loc",
-            "date": "2024-05-15",
-            "time": "10:00 AM - 5:00 PM",
-            "description": "Explore the latest in urban fashion with over 100 local vendors showcasing their unique clothing and accessories."
+            "filter_name": "Neighborhood",
+            "filter_options": [
+                "hood A",
+                "hood B",
+                "hood C"
+            ]
         },
         {
-            "store_id": 2,
-            "store_name": "store 2",
-            "location": "store 2 loc",
-            "date": "2024-06-20",
-            "time": "11:00 AM - 6:00 PM",
-            "description": "A celebration of vintage and retro styles, featuring exclusive collections from vintage enthusiasts across the region."
-        },
-        {
-            "store_id": 3,
-            "store_name": "store 3",
-            "location": "store 3 loc",
-            "date": "2024-07-05",
-            "time": "09:00 AM - 4:00 PM",
-            "description": "A sustainable fashion event promoting eco-friendly clothing and accessories from innovative green designers."
-        },
-        {
-            "store_id": 4,
-            "store_name": "store 4",
-            "location": "store 4 loc",
-            "date": "2024-08-10",
-            "time": "12:00 PM - 8:00 PM",
-            "description": "An exclusive event for fashionistas to purchase unique pieces directly from up-and-coming designers."
-        }
-    ],
-    "descriptions": [
-        {
-            "tab_name": "stores",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        },
-        {
-            "tab_name": "events",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        },
-        {
-            "tab_name": "quiz",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        },
-        {
-            "tab_name": "about",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        }
-    ],
-    "quiz": [
-        {
-            "question": "question 1",
-            "answers": [
-                "q 1 option a",
-                "q 1 option b",
-                "q 1 option c"
-            ],
-            "correct_answer": "q 1 option a"
-        },
-        {
-            "question": "question 2",
-            "answers": [
-                "q 2 option a",
-                "q 2 option b",
-                "q 2 option c"
-            ],
-            "correct_answer": "q 2 option a"
-        },
-        {
-            "question": "question 3",
-            "answers": [
-                "q 3 option a",
-                "q 3 option b",
-                "q 3 option c"
-            ],
-            "correct_answer": "q 3 option a"
+            "filter_name": "Time",
+            "filter_options": [
+                "Morning",
+                "Afternoon",
+                "Night"
+            ]
         }
     ]
 }
