@@ -21,27 +21,46 @@ function CreateCard({ event_id, eventName }) {
     )
 }
 
-// For search
-function getFilteredEvents(query, items) {
-    if (!query) {
-        return items;
+// For search and filtering
+function getFilteredEvents(query, filters, items) {
+    let filteredItems = items;
+
+    if (query) {
+        filteredItems = filteredItems.filter(event => event.event_name.toLowerCase().includes(query.toLowerCase()));
     }
-    return items.filter(event => event.event_name.toLowerCase().includes(query.toLowerCase()));
+
+    Object.keys(filters).forEach(filterName => {
+        const filterValue = filters[filterName];
+        if (filterValue && filterValue !== filterName) {
+            filteredItems = filteredItems.filter(event => event[filterName.toLowerCase()] === filterValue.toLowerCase());
+        }
+    });
+
+    return filteredItems;
 }
 
 function Events({ data }) {
     // for search
     const [query, setQuery] = useState("");
-    const filteredEvents = getFilteredEvents(query, data.events);
+    const [filters, setFilters] = useState({});
+
+    const handleFilterChange = (filterName, filterValue) => {
+        setFilters(prevFilters => ({
+            ...prevFilters,
+            [filterName.toLowerCase()]: filterValue,
+        }));
+    };
+
+    const filteredEvents = getFilteredEvents(query, filters, data.events);
 
     return (
         <div className="eventPage">
-            <Search query={query} setQuery={setQuery} data={data} />
+            <Search setQuery={setQuery} data={data} />
 
             <div className="filters">
                 {tempData.events_filter.map((e) => {
                     return (
-                        <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} />
+                        <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} />
                     )
                 })}
             </div>

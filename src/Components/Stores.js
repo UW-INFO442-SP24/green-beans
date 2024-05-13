@@ -11,7 +11,6 @@ function CreateCard({ store_id, storeName }) {
 
     function handleClick() {
         navigate("/stores/" + store_id);
-
     }
 
     return (
@@ -22,27 +21,46 @@ function CreateCard({ store_id, storeName }) {
     )
 }
 
-// For search
-function getFilteredStores(query, items) {
-    if (!query) {
-        return items;
+// For search and filters
+function getFilteredStores(query, filters, items) {
+    let filteredItems = items;
+
+    if (query) {
+        filteredItems = filteredItems.filter(store => store.store_name.toLowerCase().includes(query.toLowerCase()));
     }
-    return items.filter(store => store.store_name.toLowerCase().includes(query.toLowerCase()));
+
+    Object.keys(filters).forEach(filterName => {
+        const filterValue = filters[filterName];
+        if (filterValue && filterValue !== filterName) {
+            filteredItems = filteredItems.filter(store => store[filterName.toLowerCase()] === filterValue);
+        }
+    });
+
+    return filteredItems;
 }
 
 function Stores({ data }) {
     // for search
     const [query, setQuery] = useState("");
-    const filteredStores = getFilteredStores(query, data.stores);
+    const [filters, setFilters] = useState({});
+
+    const handleFilterChange = (filterName, filterValue) => {
+        setFilters(prevFilters => ({
+            ...prevFilters,
+            [filterName.toLowerCase()]: filterValue,
+        }));
+    };
+
+    const filteredStores = getFilteredStores(query, filters, data.stores);
 
     return (
         <div className="eventPage">
-            <Search query={query} setQuery={setQuery} data={data} />
+            <Search setQuery={setQuery} data={data} />
 
             <div className="filters">
                 {tempData.stores_filter.map((e) => {
                     return (
-                        <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} />
+                        <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} />
                     )
                 })}
             </div>

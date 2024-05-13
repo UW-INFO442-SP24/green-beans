@@ -77,13 +77,13 @@ function Quiz({ data }) {
                         <p>Find your ideal stores based on your preferences and personality!</p>
                         <button type="button" onClick={handleStart}>Start Quiz</button>
                     </div>
-                    <div class="image-left">
+                    <div className="image-left">
                         <img src={img2} alt="img2" />
                     </div>
-                    <div class="image-right">
+                    <div className="image-right">
                         <img src={img3} alt="img3" />
                     </div>
-                    <div class="bottom-image">
+                    <div className="bottom-image">
                         <img src={img4} alt="img4" />
                     </div>
                 </div>
