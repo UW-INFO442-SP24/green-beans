@@ -27,7 +27,7 @@ body {
 }
 
 /* Home */
-.home h1 {
+h1 {
     font-family: "Aclonica", sans-serif;
 }
 
@@ -156,6 +156,106 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.eventCards .card {
+    border: none;
+    background: #FEFCF5;
+    border-radius: 15px;
+    width: 30%;
+    text-align: center;
+    margin: 1% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.eventCards .card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.eventCards .card h1 {
+    font-size: 1.3rem;
+}
+
+.eventCards .card .card-content {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+.eventCards button {
+    background-color: #434834;
+    border: none;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    margin: 0;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    padding: 5%;
+}
+
+.eventCards button:hover {
+    background-color: #4b5239;
+}
+
+.eventPage {
+    background: white;
+}
+
+.eventPage .banner {
+    background-image: url("./images/event.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 10% 0;
+    position: relative;
+}
+
+.eventPage .search-container {
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+.search-box {
+    margin-left: 5%;
+    border-color: #BDA3C9;
+}
+
+.eventPage .inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 4rem;
+}
+
+.eventPage .inputs .filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 5%;
+    gap: 1rem;
+}
+
+.dropdown button {
+    background-color: white;
+    color: black;
+    border-color: rgb(222, 226, 230);
+}
+
+.dropdown button:hover {
+    background-color: #f6f6f6;
+    color: black;
+    border-color: #BDA3C9;
 }
 
 /* About */
@@ -163,7 +263,7 @@ button {
     background-image: url("./images/about-bg-1.png");
 }
 
-img {
+.about img {
     max-width: 10%;
 }
 

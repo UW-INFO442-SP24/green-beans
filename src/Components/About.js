@@ -1,6 +1,4 @@
 import React from 'react';
-import bg1 from '../images/about-bg-1.png'
-import bg2 from '../images/about-bg-2.png'
 import chal1 from '../images/about-chal-1.png'
 import chal2 from '../images/about-chal-2.png'
 import chal3 from '../images/about-chal-3.png'

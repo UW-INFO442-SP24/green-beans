@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 import Filter from './Filter';
 import tempData from '../TempData/temp.json'
+import tempbg from '../images/tempbg.png'
 
-function CreateCard({ event_id, eventName }) {
+function CreateCard({ event_id, eventName, eventLocation, eveentDate }) {
 
     const navigate = useNavigate();
 
@@ -15,8 +16,12 @@ function CreateCard({ event_id, eventName }) {
 
     return (
         <div className="card">
-            <p>{eventName}</p>
-            <button key={event_id} className="btn btn-primary" onClick={handleClick}>More Details</button>
+            <img src={tempbg} alt="tempImg" />
+            <div className="card-content">
+                <h1>{eventName}</h1>
+                <p>{eventLocation}{eveentDate}</p>
+            </div>
+            <button key={event_id} className="btn btn-primary" onClick={handleClick}>MORE DETAILS</button>
         </div>
     )
 }
@@ -55,20 +60,27 @@ function Events({ data }) {
 
     return (
         <div className="eventPage">
-            <Search setQuery={setQuery} data={data} />
+            <div className="banner">
+                <h1>EVENTS</h1>
+                <p>Here are some events in the Seattle area to connect you with the community!</p>
+            </div>
 
-            <div className="filters">
-                {tempData.events_filter.map((e) => {
-                    return (
-                        <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} />
-                    )
-                })}
+            <div className="inputs">
+                <Search setQuery={setQuery} data={data} />
+
+                <div className="filters">
+                    {tempData.events_filter.map((e) => {
+                        return (
+                            <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} />
+                        )
+                    })}
+                </div>
             </div>
 
             <div className="eventCards">
                 {
                     filteredEvents.map(event => (
-                        <CreateCard key={event.event_id} event_id={event.event_id} eventName={event.event_name} />
+                        <CreateCard key={event.event_id} event_id={event.event_id} eventName={event.event_name} eventLocation={event.location} eventDate={event.date} />
                     ))
                 }
 
