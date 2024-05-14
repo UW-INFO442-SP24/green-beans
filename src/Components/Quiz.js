@@ -89,7 +89,7 @@ function Quiz({ data }) {
                         <img src={img1} alt="img1" />
                     </div>
                     <div className="quiz-intro-header">
-                        <h1>DISCOVER YOUR THRIFT STYLE!</h1>
+                        <h1>DISCOVER YOUR<br/>THRIFT STYLE!</h1>
                         <p>Find your ideal stores based on your preferences and personality!</p>
                         <button type="button" onClick={handleStart}>Start Quiz</button>
                     </div>
