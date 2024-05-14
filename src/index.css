@@ -159,44 +159,12 @@ button {
 }
 
 /* About */
-.topImgContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-    height: 35vh;
-    border-radius: 15px;
-    /* border: 2px solid black; */
-    overflow: hidden;
+.about-us {
+    background-image: url("./images/about-bg-1.png");
 }
 
-.bottomContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-    height: 35vh;
-    overflow: hidden;
-    gap: 5%;
-}
-
-.bottomContainerItem {
-    flex: 1;
-    height: 100%;
-    width: 40%;
-    border-radius: 10px;
-    /* border: 2px solid black; */
-    box-sizing: border-box;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.aestheticImg {
-    width: 100%;
-    height: 100%;
+img {
+    max-width: 10%;
 }
 
 /* Quiz */
@@ -212,55 +180,58 @@ button {
     overflow: hidden;
 }
 
-.top-banner, .image-left, .image-right, .bottom-image {
+.top-banner,
+.image-left,
+.image-right,
+.bottom-image {
     position: absolute;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-    .top-banner {
-        top: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        z-index: 2;
-    }
-    
-    .image-left {
-        bottom: 15%;
-        left: 2%;
-        transform: rotate(4deg);
-        width: 40%;
-        z-index: 1;
-    }
-    
-    .image-right {
-        top: 30%;
-        left: 65%;
-        width: 500px;
-        height: 400px;
-        z-index: 3;
-    }
-    
-    .bottom-image {
-        bottom: 5%;
-        right: 15%;
-        width: 20%;
-        z-index: 1;
-    }
-    
-    .quiz-intro-header {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 4;
-        width: 100%;
-        text-align: center;
-        color: #fff;
-    }
+.top-banner {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 2;
+}
+
+.image-left {
+    bottom: 15%;
+    left: 2%;
+    transform: rotate(4deg);
+    width: 40%;
+    z-index: 1;
+}
+
+.image-right {
+    top: 30%;
+    left: 65%;
+    width: 500px;
+    height: 400px;
+    z-index: 3;
+}
+
+.bottom-image {
+    bottom: 5%;
+    right: 15%;
+    width: 20%;
+    z-index: 1;
+}
+
+.quiz-intro-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
 
 
 /* navbar */
