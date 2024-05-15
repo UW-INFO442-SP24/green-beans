@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
@@ -6,7 +6,7 @@ import Filter from './Filter';
 import tempData from '../TempData/temp.json'
 import tempbg from '../images/tempbg.png'
 
-function CreateCard({ event_id, eventName, eventLocation, eveentDate }) {
+function CreateCard({ event_id, eventName, eventLocation, eventDate }) {
 
     const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ function CreateCard({ event_id, eventName, eventLocation, eveentDate }) {
             <img src={tempbg} alt="tempImg" />
             <div className="card-content">
                 <h1>{eventName}</h1>
-                <p>{eventLocation}{eveentDate}</p>
+                <p>{eventLocation} | {eventDate}</p>
             </div>
             <button key={event_id} className="btn btn-primary" onClick={handleClick}>MORE DETAILS</button>
         </div>
@@ -49,11 +49,20 @@ function Events({ data }) {
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({});
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const handleFilterChange = (filterName, filterValue) => {
-        setFilters(prevFilters => ({
-            ...prevFilters,
-            [filterName.toLowerCase()]: filterValue,
-        }));
+        setFilters(prevFilters => {
+            const newFilters = { ...prevFilters };
+            if (filterValue === '') {
+                delete newFilters[filterName.toLowerCase()];
+            } else {
+                newFilters[filterName.toLowerCase()] = filterValue;
+            }
+            return newFilters;
+        });
     };
 
     const filteredEvents = getFilteredEvents(query, filters, data.events);

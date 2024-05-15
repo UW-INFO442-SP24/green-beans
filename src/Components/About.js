@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import chal1 from '../images/about-chal-1.png'
 import chal2 from '../images/about-chal-2.png'
 import chal3 from '../images/about-chal-3.png'
@@ -8,6 +9,12 @@ import abt1 from '../images/about-img-1.png'
 import redef from '../images/about-redef.png'
 
 function About() {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
     return (
         <div className="about">
             <div className="about-us">

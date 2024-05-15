@@ -10,15 +10,18 @@ function Filter({ filter_name, filter_options, onFilterChange }) {
         onFilterChange(filter_name, option);
     }
 
+    const handleClear = () => {
+        setFilterOption(filter_name);
+        onFilterChange(filter_name, '');
+    }
 
     return (
         <div className="dropdown">
             <DropdownButton id="dropdown-item-button" title={filterOption}>
-                {filter_options.map((option, index) => {
-                    return (
-                        <Dropdown.Item as="button" key={index} onClick={handleClick(option)}>{option}</Dropdown.Item>
-                    )
-                })}
+                <Dropdown.Item as="button" onClick={handleClear}>Clear Filter</Dropdown.Item>
+                {filter_options.map((option, index) => (
+                    <Dropdown.Item as="button" key={index} onClick={handleClick(option)}>{option}</Dropdown.Item>
+                ))}
             </DropdownButton>
         </div>
     );

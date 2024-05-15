@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
 import Filter from './Filter';
 import tempData from '../TempData/temp.json'
+import tempbg from '../images/tempbg.png'
 
-function CreateCard({ store_id, storeName }) {
+function CreateCard({ store_id, storeName, storeType, storePrice }) {
 
     const navigate = useNavigate();
 
@@ -15,8 +16,12 @@ function CreateCard({ store_id, storeName }) {
 
     return (
         <div className="card">
-            <p>{storeName}</p>
-            <button key={store_id} className="btn btn-primary" onClick={handleClick}>More Details</button>
+            <img src={tempbg} alt="tempImg" />
+            <div className="card-content">
+                <h1>{storeName}</h1>
+                <p>{storePrice} | {storeType}</p>
+            </div>
+            <button key={store_id} className="btn btn-primary" onClick={handleClick}>MORE DETAILS</button>
         </div>
     )
 }
@@ -44,31 +49,47 @@ function Stores({ data }) {
     const [query, setQuery] = useState("");
     const [filters, setFilters] = useState({});
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const handleFilterChange = (filterName, filterValue) => {
-        setFilters(prevFilters => ({
-            ...prevFilters,
-            [filterName.toLowerCase()]: filterValue,
-        }));
+        setFilters(prevFilters => {
+            const newFilters = { ...prevFilters };
+            if (filterValue === '') {
+                delete newFilters[filterName.toLowerCase()];
+            } else {
+                newFilters[filterName.toLowerCase()] = filterValue;
+            }
+            return newFilters;
+        });
     };
 
     const filteredStores = getFilteredStores(query, filters, data.stores);
 
     return (
-        <div className="eventPage">
-            <Search setQuery={setQuery} data={data} />
-
-            <div className="filters">
-                {tempData.stores_filter.map((e) => {
-                    return (
-                        <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} />
-                    )
-                })}
+        <div className="storePage">
+            <div className="banner">
+                <h1>STORES</h1>
+                <p>Here are some thrift stores in the Seattle area to get you started on your sustainable journey!!</p>
             </div>
 
-            <div className="eventCards">
+            <div className="inputs">
+                <Search setQuery={setQuery} data={data} />
+
+                <div className="filters">
+                    {tempData.stores_filter.map((e) => {
+                        return (
+                            <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} setFilters={setFilters} />
+                        )
+                    })}
+                </div>
+            </div>
+
+            <div className="storeCards">
                 {
                     filteredStores.map(store => (
-                        <CreateCard key={store.store} store_id={store.store_id} storeName={store.store_name} />
+                        <CreateCard key={store.store} store_id={store.store_id} storeName={store.store_name} storeType={store.type} storePrice={store.price} />
                     ))
                 }
 
