@@ -345,14 +345,18 @@ button {
 }
 
 /* About */
-.about-us {
+
+ /* current styling of the banner is not compatible with small screens */
+
+/* banner styling */
+ .about-us {
     background-image: url("./images/about-bg-1.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; */
     text-align: center;
     color: #5C770B;
     width: 100%;
@@ -365,21 +369,21 @@ button {
 .about-us img {
     width: 490px; 
     height: 678px; 
+    position: absolute; 
+    right: 30px; 
 }
 
 .about-us h1 {
     font-size: 60px; 
-    position: absolute;
-    top: 50%;
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    /* z-index: 4; */
+    position: absolute; 
+    top: 50%; 
+    right: 20%; 
     width: 100%;
     text-align: center;
     color: #5C770B;
-
 }
 
+/* problem statement styling */
 .about-problem-statement {
     background-color: #F2EDE1;
     padding: 50px; 
@@ -387,11 +391,45 @@ button {
 
 .about-problem-statement p {
     font-size: 35px;
+    text-align: center;
 }
 
 /* .about img {
     max-width: 10%;
 } */
+
+/* challenges */
+.about-challenges {
+    padding: 25px; 
+}
+
+.about-challenges h1 {
+    font-size: 60px;  
+}
+
+.about-chal-cards {
+    width: 400px;
+    margin: 20px; 
+}
+
+/* currently an issue with boarder box */
+
+.about-chal-cards p {
+    text-align: center;
+    font-size: 25px; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+}
+
+.about-chal-cards img {
+    height: 326px;  
+    width: 400px; 
+}
+
+.all-about-chal-cards {
+    display: flex; 
+}
+
 
 /* Quiz */
 .quiz-intro-container {

@@ -26,17 +26,19 @@ function About() {
             </div>
             <div className="about-challenges">
                 <h1>Challenges Today</h1>
-                <div className="about-chal-cards">
-                    <img src={chal1} alt="chal1" />
-                    <p>Reliance on Fast Fashion Increases Textile Waste</p>
-                </div>
-                <div className="about-chal-cards">
-                    <img src={chal2} alt="chal2" />
-                    <p>Lack of Awareness & Information on Thrifting</p>
-                </div>
-                <div className="about-chal-cards">
-                    <img src={chal3} alt="chal3" />
-                    <p>Social Perceptions Stigmatize Second-Hand Goods</p>
+                <div className="all-about-chal-cards">
+                    <div className="about-chal-cards">
+                        <img src={chal1} alt="chal1" />
+                        <p>Reliance on Fast Fashion Increases Textile Waste</p>
+                    </div>
+                    <div className="about-chal-cards">
+                        <img src={chal2} alt="chal2" />
+                        <p>Lack of Awareness & Information on Thrifting</p>
+                    </div>
+                    <div className="about-chal-cards">
+                        <img src={chal3} alt="chal3" />
+                        <p>Social Perceptions Stigmatize Second-Hand Goods</p>
+                    </div>
                 </div>
             </div>
             <div className="about-quote">
