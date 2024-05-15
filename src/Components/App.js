@@ -49,9 +49,6 @@ function App({ database }) {
                         </Routes>
                     </main>
                 </div>
-                <footer className="footer">
-                    <p>&copy; placeholder</p>
-                </footer>
             </div>
         </div>
     )
