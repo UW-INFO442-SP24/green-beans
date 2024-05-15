@@ -497,10 +497,15 @@ header {
     justify-content: center;
 }
 
+.details h2 {
+    font-family: 'Aclonica', sans-serif;
+    color: #5C770B;
+    font-size: 42px;
+}
+
 .details img {
     max-width: 35%;
 }
-
 
 /* Media */
 @media (min-width: 598px) {
