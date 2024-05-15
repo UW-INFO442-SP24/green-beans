@@ -352,19 +352,19 @@ button {
     text-align: center;
     color: #5C770B;
     width: 100%;
-    height: 733px; 
+    height: 733px;
     position: relative;
-    padding: 30px; 
+    padding: 30px;
 }
 
 
 .about-us img {
-    width: 490px; 
-    height: 678px; 
+    width: 490px;
+    height: 678px;
 }
 
 .about-us h1 {
-    font-size: 60px; 
+    font-size: 60px;
     position: absolute;
     top: 50%;
     /* left: 50%; */
@@ -378,7 +378,7 @@ button {
 
 .about-problem-statement {
     background-color: #F2EDE1;
-    padding: 50px; 
+    padding: 50px;
 }
 
 .about-problem-statement p {
@@ -508,7 +508,7 @@ header {
 }
 
 /* Media */
-@media (min-width: 598px) {
+@media (min-width: 576px) {
     .homeContainer {
         padding-top: 45%;
     }
@@ -524,7 +524,9 @@ header {
         font-size: 13px;
     }
 
-
+    .nav-item {
+        margin: 0 10px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -533,18 +535,6 @@ header {
     .home-events p,
     .home-about p {
         font-size: 16px;
-    }
-
-    .nav-logo img {
-        max-height: 80px;
-    }
-
-    .nav-logo {
-        margin-left: 2%;
-    }
-
-    .nav-item {
-        margin: 0 10px;
     }
 
     .details {
