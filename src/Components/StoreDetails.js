@@ -1,12 +1,19 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import tempImg from '../images/tempbg.png'
+import { useNavigate } from "react-router-dom";
 
 function StoreDetails({ data }) {
     const { storeId } = useParams();
     const displayedData = data.stores.filter((store) => {
         return Number(store.store_id) === Number(storeId);
     });
+
+    const navigate = useNavigate();
+
+    function handleClick() {
+        navigate("/stores");
+    }
 
     return (
         <div className="details">
@@ -20,6 +27,7 @@ function StoreDetails({ data }) {
                     <p>time: {store.time}</p>
                 </div>
             ))}
+            <button onClick={handleClick}>Back</button>
         </div>
     );
 }
