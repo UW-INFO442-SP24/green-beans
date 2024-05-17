@@ -445,6 +445,50 @@ button {
     text-align: right; 
 }
 
+.about-redef img {
+    height: 524px;
+    width: 601px;
+    padding-right: 20px; 
+}
+
+.about-redef-content {
+    padding: 20px;
+}
+
+.about-redef {
+    display: flex; 
+    flex-direction: row;
+    padding: 20px;
+}
+
+.about-help {
+    padding: 20px; 
+}
+
+.about-help img {
+    height: 458px;
+    width: 515px;
+}
+
+.about-help-card-format {
+    display: flex; 
+}
+
+.about-help p {
+    color: white; 
+    background-color: #434834;
+    padding: 15px; 
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 25px;
+    font-weight: bold; 
+}
+
+.about-help-cards {
+    margin: 20px; 
+}
+
 /* Quiz */
 .quiz-intro-container {
     position: relative;

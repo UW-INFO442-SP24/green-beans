@@ -57,13 +57,15 @@ function About() {
             </div>
             <div className="about-help">
                 <h1>How We Help</h1>
-                <div className="about-help-cards">
-                    <img src={how1} alt="how1" />
-                    <p>Access to Thrift Shop Information</p>
-                </div>
-                <div className="about-help-cards">
-                    <img src={how2} alt="how2" />
-                    <p>Updates About Local Events</p>
+                <div className="about-help-card-format">
+                    <div className="about-help-cards">
+                        <img src={how1} alt="how1" />
+                        <p>Access to Thrift Shop Information</p>
+                    </div>
+                    <div className="about-help-cards">
+                        <img src={how2} alt="how2" />
+                        <p>Updates About Local Events</p>
+                    </div>
                 </div>
             </div>
         </div>
