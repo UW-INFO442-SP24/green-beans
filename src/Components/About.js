@@ -43,7 +43,7 @@ function About() {
             </div>
             <div className="about-quote">
                 <p>“There are about 35,970 tons of textiles in the King County & Seattle annual waste streams combined”</p>
-                <p>- Seattle Public Utilities</p>
+                <p className="about-quote-ref">- Seattle Public Utilities</p>
             </div>
             <div className="about-redef">
                 <img src={redef} alt="redef" />
