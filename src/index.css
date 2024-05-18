@@ -583,6 +583,72 @@ button {
     color: #5C770B;
 }
 
+/* Quiz questions */
+.quiz-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.quiz-container h2 {
+    text-align: center;
+}
+
+.quiz-container p {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #5C770B;
+}
+
+.quiz-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quiz-container li {
+    background-color: #F7F7F7;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+.quiz-container li:hover,
+.quiz-container li.selected-answer {
+    background-color: #E2E8D0;
+}
+
+.quiz-container .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.quiz-container .button-group button {
+    margin: 0 100px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    background-color: #5C770B;
+    height: 10px;
+    border-radius: 5px;
+}
+
+
 /* nav */
 nav {
     margin: 0 3%;

@@ -107,15 +107,21 @@ function Quiz({ data }) {
         } else if (!showResult) {
             return (
                 <div className="quiz-container">
-                    <h1>Quiz</h1>
+                    {/* <h1>Quiz</h1> */}
+                    <div className="progress-bar">
+                        <div className="progress" style={{ width: `${(activeQuestion + 1) * 10}%` }}></div>
+                        </div>
                     <h2>{question}</h2>
+                    <p>Choose one of the following</p>
                     <ul>
                         {answers.map((answer, index) => (
                             <li key={answer} onClick={handleAnswerSelected(answer, index)} className={getClassName(index)}>{answer}</li>
                         ))}
                     </ul>
+                    <div className="button-group">
                     <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
                     <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
+                    </div>
                 </div>
             )
         } else {
