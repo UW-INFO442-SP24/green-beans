@@ -18,8 +18,10 @@ function About() {
     return (
         <div className="about">
             <div className="about-us">
-                <h1>ABOUT US</h1>
-                <img src={abt1} alt="4 images stacked" />
+                <div about-us-content-banner>
+                    <h1>ABOUT US</h1>
+                    <img src={abt1} alt="4 images stacked" />
+                </div>
             </div>
             <div className="about-problem-statement">
                 <p>How might we help budget-conscious Gen Z students in Seattle overcome barriers to second-hand shopping, so they can save money, contribute to the environment, and participate in sustainable practices?</p>

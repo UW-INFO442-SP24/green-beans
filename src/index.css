@@ -342,42 +342,38 @@ button {
 
 /* About Page*/
 
- /* current styling of the banner is not compatible with small screens */
+/* header banner styling */ 
 
-/* banner styling */
  .about-us {
     background-image: url("./images/about-bg-1.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
+
+    justify-content: center;
     text-align: center;
     color: #5C770B;
     width: 100%;
     height: 733px;
-    position: relative;
     padding: 30px;
 }
 
-
-.about-us img {
-    width: 490px; 
-    height: 678px;
+.about-us-content-banner {
+    display: flex; 
+    flex-direction: row;
 }
 
 .about-us h1 {
     font-size: 60px; 
-    position: absolute;
-    top: 50%;
-    right: 30%;
-    /* transform: translate(-50%, -50%); */
-    /* z-index: 4; */
-    width: 100%;
-    text-align: center;
     color: #5C770B;
 }
+
+.about-us img {
+    width: 100%; 
+    max-width: 490px; 
+    height: auto;
+}
+
 
 /* problem statement styling */
 .about-problem-statement {
@@ -390,18 +386,15 @@ button {
     text-align: center;
 }
 
-/* challenges */
-.about-challenges {
-    padding: 25px; 
-}
-
+/* challenges today section */
 .about-challenges h1 {
     font-size: 60px;  
+    padding: 25px;
 }
 
 .about-chal-cards {
     width: 400px;
-    margin: 20px; 
+    margin: 10px; 
 }
 
 .about-chal-cards p {
@@ -413,12 +406,17 @@ button {
 
 .about-chal-cards img {
     height: 326px;  
-    width: 400px; 
+    width: 100%;
 }
 
 .all-about-chal-cards {
     display: flex; 
+    justify-content: center;
+    flex-wrap: wrap; 
+
 }
+
+/* seattle pub utilities quote */
 
 .about-quote {
     background-image: url("./images/about-bg-2.png");
@@ -428,10 +426,8 @@ button {
     text-align: center;
     color: #5C770B;
     width: 100%;
-    height: 383px;
-    position: relative;
-    /* justify-content: center;
-    align-items: center; */
+    /* height: 383px; */
+    height: 100%; 
     padding: 100px; 
 }
 
@@ -445,9 +441,11 @@ button {
     text-align: right; 
 }
 
+/* redefining style section */
+
 .about-redef img {
-    height: 524px;
-    width: 601px;
+    max-width: 601px; 
+    max-height: 524px;
     padding-right: 20px; 
 }
 
@@ -458,8 +456,12 @@ button {
 .about-redef {
     display: flex; 
     flex-direction: row;
+    /* flex-wrap: wrap;  */
     padding: 20px;
+
 }
+
+/* how we help section */
 
 .about-help {
     padding: 20px; 
@@ -471,7 +473,9 @@ button {
 }
 
 .about-help-card-format {
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
 }
 
 .about-help p {
