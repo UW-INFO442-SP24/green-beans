@@ -19,13 +19,11 @@ function About() {
     return (
         <div className="about">
             <div className="about-us">
-                <div className="about-us-content-banner">
-                    <h1>ABOUT US</h1>
-                    <img src={abt1} alt="4 images stacked" />
-                </div>
+                <h1>ABOUT US</h1>
+                <img src={abt1} alt="4 images stacked" />
             </div>
             <div className="about-problem-statement">
-                <p>How might we help budget-conscious Gen Z students in Seattle overcome barriers to second-hand shopping, so they can save money, contribute to the environment, and participate in sustainable practices?</p>
+                <p>How might we help budget-conscious Gen Z students in Seattle overcome barriers to second-hand shopping so they can save money, contribute to the environment, and participate in sustainable practices?</p>
             </div>
             <div className="about-challenges">
                 <h1>Challenges Today</h1>
@@ -45,15 +43,17 @@ function About() {
                 </div>
             </div>
             <div className="about-quote">
-                <p>“There are about 35,970 tons of textiles in the King County & Seattle annual waste streams combined”</p>
+                <p className="about-quote-quote">“There are about 35,970 tons of textiles in the King County & Seattle annual waste streams combined”</p>
                 <p className="about-quote-ref">- Seattle Public Utilities</p>
             </div>
             <div className="about-redef">
                 <img src={redef} alt="redef" />
-                <div className="about-redef-content">
-                    <h1>Redefining Style</h1>
-                    <h2>Overcoming barriers to sustainable fashion </h2>
-                    <p>Our goal is to encourage using resources efficiently, reducing waste, and promoting a shift towards more sustainable practices in terms of how we approach fashion consumption, fostering a culture that values reusing and recycling clothing to minimize environmental impact.</p>
+                <div className="for-about-redef-button">
+                    <div className="about-redef-content">
+                        <h1>Redefining Style</h1>
+                        <h2>Overcoming barriers to sustainable fashion </h2>
+                        <p>Our goal is to encourage using resources efficiently, reducing waste, and promoting a shift towards more sustainable practices in terms of how we approach fashion consumption, fostering a culture that values reusing and recycling clothing to minimize environmental impact.</p>
+                    </div>
                     <button><a href="https://www.un.org/sustainabledevelopment/sustainable-consumption-production/" target="_blank" className="text-decoration-none">More About SDG 12</a></button>
                 </div>
 
@@ -71,8 +71,8 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className="video">
-                <YouTube videoId="CjgWWmgUMa0" />
+            <div className="video-container">
+                <YouTube videoId="CjgWWmgUMa0" className="youtube-video" />
             </div>
         </div>
     )
