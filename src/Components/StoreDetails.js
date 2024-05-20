@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import tempImg from '../images/tempbg.png'
 import { useNavigate } from "react-router-dom";
@@ -15,6 +15,10 @@ function StoreDetails({ data }) {
         navigate("/stores");
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="details">
             <img src={tempImg} alt="tempImg" />
@@ -22,9 +26,9 @@ function StoreDetails({ data }) {
                 <div className="contentContainer">
                     <h2>{store.store_name}</h2>
                     <p>{store.description}</p>
-                    <p>location: {store.location}</p>
-                    <p>date: {store.date}</p>
-                    <p>time: {store.time}</p>
+                    <p>Location: {store.location}</p>
+                    <p>Price: {store.price}</p>
+                    <p>Type: {store.type}</p>
                 </div>
             ))}
             <button onClick={handleClick}>Back</button>
