@@ -7,6 +7,7 @@ import how1 from '../images/about-how-1.png'
 import how2 from '../images/about-how-2.png'
 import abt1 from '../images/about-img-1.png'
 import redef from '../images/about-redef.png'
+import YouTube from 'react-youtube';
 
 function About() {
     const location = useLocation();
@@ -18,7 +19,7 @@ function About() {
     return (
         <div className="about">
             <div className="about-us">
-                <div about-us-content-banner>
+                <div className="about-us-content-banner">
                     <h1>ABOUT US</h1>
                     <img src={abt1} alt="4 images stacked" />
                 </div>
@@ -53,7 +54,7 @@ function About() {
                     <h1>Redefining Style</h1>
                     <h2>Overcoming barriers to sustainable fashion </h2>
                     <p>Our goal is to encourage using resources efficiently, reducing waste, and promoting a shift towards more sustainable practices in terms of how we approach fashion consumption, fostering a culture that values reusing and recycling clothing to minimize environmental impact.</p>
-                    <button>More About SDG 12</button>
+                    <button><a href="https://www.un.org/sustainabledevelopment/sustainable-consumption-production/" target="_blank" className="text-decoration-none">More About SDG 12</a></button>
                 </div>
 
             </div>
@@ -69,6 +70,9 @@ function About() {
                         <p>Updates About Local Events</p>
                     </div>
                 </div>
+            </div>
+            <div className="video">
+                <YouTube videoId="CjgWWmgUMa0" />
             </div>
         </div>
     )
