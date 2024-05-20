@@ -18,11 +18,10 @@ function Quiz({ data }) {
     const [started, setStarted] = useState(false);
     const [shuffledAnswers, setShuffledAnswers] = useState([]);
 
-
     const questions = data.quiz;
     const currentQuestion = questions[activeQuestion];
     const question = currentQuestion ? currentQuestion.question : '';
-    
+
     useEffect(() => {
         if (currentQuestion) {
             setShuffledAnswers(shuffleArray([...currentQuestion.answers]));
@@ -36,6 +35,7 @@ function Quiz({ data }) {
         }
         return array;
     }
+
 
     function handleNextClick() {
         setResult((prev) => {
@@ -103,9 +103,9 @@ function Quiz({ data }) {
                         <img src={img1} alt="img1" />
                     </div>
                     <div className="quiz-intro-header">
-                        <h1>DISCOVER YOUR<br />THRIFT STYLE!</h1>
+                        <h1>DISCOVER YOUR<br/>THRIFT STYLE!</h1>
                         <p>Find your ideal stores based on your preferences and personality!</p>
-                        <button type="button" onClick={handleStart}>START QUIZ</button>
+                        <button type="button" onClick={handleStart}>Start Quiz</button>
                     </div>
                     <div className="image-left">
                         <img src={img2} alt="img2" />
@@ -121,30 +121,24 @@ function Quiz({ data }) {
         } else if (!showResult) {
             return (
                 <div className="quiz-container">
-                    {/* <h1>Quiz</h1> */}
-                    <div className="progress-bar">
-                        <div className="progress" style={{ width: `${(activeQuestion + 1) * 10}%` }}></div>
-                    </div>
+                    <h1>Quiz</h1>
                     <h2>{question}</h2>
-                    <p>Choose one of the following</p>
                     <ul>
                         {shuffledAnswers.map((answer, index) => (
                             <li key={answer} onClick={handleAnswerSelected(answer, index)} className={getClassName(index)}>{answer}</li>
                         ))}
                     </ul>
-                    <div className="button-group">
-                        <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
-                        <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
-                    </div>
+                    <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
+                    <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
                 </div>
             )
         } else {
             return (
                 <div className="quiz-result-container">
-                    <h1>Your Best Fit...</h1>
-                    <div>
-                         <span>{getBestFit()}</span>
-                    </div>
+                    <h1>Result</h1>
+                    <p>
+                        Your Best Fit: <span>{getBestFit()}</span>
+                    </p>
                     <button onClick={handleRestart}>Restart Quiz</button>
                 </div>
             )
@@ -158,9 +152,10 @@ function Quiz({ data }) {
                 <div>
                     <h2>Goodwill Bins</h2>
                     <ul>
-                        <li>You like the process of finding something</li>
-                        <li>You have experience with thrifting </li>
-                        <li>Cheapest option but most time consuming</li>
+                        <li>Likes the process of finding something</li>
+                        <li>People that have experience with thrifting </li>
+                        <li>Doesn’t mind putting in more work </li>
+                        <li>Cheapest option, most time consuming</li>
                     </ul>
                 </div>
             )
@@ -170,8 +165,8 @@ function Quiz({ data }) {
                     <h2>Second-Hand</h2>
                     <ul>
                         <li>Good for beginners</li>
-                        <li>You want affordable options</li>
-                        <li>You want a traditional store experience where you can look through organized racks</li>
+                        <li>People that want affordable options</li>
+                        <li>People that want a traditional store experience, looking thought racks, organized</li>
                     </ul>
                 </div>
             )
@@ -180,9 +175,8 @@ function Quiz({ data }) {
                 <div>
                     <h2>Vintage</h2>
                     <ul>
-                        <li>You are interested in finding unique, historical pieces</li>
+                        <li>People interested in finding unique, historical pieces</li>
                         <li>Sometimes expensive, sometimes not</li>
-                        <li>You like standing out from mainstream fashion</li>
                     </ul>
                 </div>
             )
@@ -191,9 +185,9 @@ function Quiz({ data }) {
                 <div>
                     <h2>Consignment</h2>
                     <ul>
-                        <li>You are looking for curated pieces</li>
-                        <li>You usually like more modern looks</li>
-                        <li>Relatively more expensive</li>
+                        <li>People looking for curated pieces</li>
+                        <li>Usually more modern</li>
+                        <li>Relatively More Expensive</li>
                     </ul>
                 </div>
             )
