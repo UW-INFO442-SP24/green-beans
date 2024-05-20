@@ -121,24 +121,27 @@ function Quiz({ data }) {
         } else if (!showResult) {
             return (
                 <div className="quiz-container">
-                    <h1>Quiz</h1>
+                    <div className="progress-bar">
+                        <div className="progress" style={{ width: `${(activeQuestion + 1) * 10}%` }}></div>
+                        </div>
                     <h2>{question}</h2>
+                    <p>Choose one of the following</p>
                     <ul>
                         {shuffledAnswers.map((answer, index) => (
                             <li key={answer} onClick={handleAnswerSelected(answer, index)} className={getClassName(index)}>{answer}</li>
                         ))}
                     </ul>
-                    <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
-                    <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
+                    <div className="button-group">
+                        <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
+                        <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
+                    </div>
                 </div>
             )
         } else {
             return (
                 <div className="quiz-result-container">
-                    <h1>Result</h1>
-                    <p>
-                        Your Best Fit: <span>{getBestFit()}</span>
-                    </p>
+                    <h1>Your Best Fit:</h1>
+                    <span>{getBestFit()}</span>
                     <button onClick={handleRestart}>Restart Quiz</button>
                 </div>
             )
@@ -152,10 +155,9 @@ function Quiz({ data }) {
                 <div>
                     <h2>Goodwill Bins</h2>
                     <ul>
-                        <li>Likes the process of finding something</li>
-                        <li>People that have experience with thrifting </li>
-                        <li>Doesn’t mind putting in more work </li>
-                        <li>Cheapest option, most time consuming</li>
+                        <li>You like the process of finding something</li>
+                        <li>You have experience with thrifting </li>
+                        <li>Cheapest option but most time consuming</li>
                     </ul>
                 </div>
             )
@@ -165,8 +167,8 @@ function Quiz({ data }) {
                     <h2>Second-Hand</h2>
                     <ul>
                         <li>Good for beginners</li>
-                        <li>People that want affordable options</li>
-                        <li>People that want a traditional store experience, looking thought racks, organized</li>
+                        <li>You want affordable options</li>
+                        <li>You want a traditional store experience where you can look through organized racks</li>
                     </ul>
                 </div>
             )
@@ -175,8 +177,9 @@ function Quiz({ data }) {
                 <div>
                     <h2>Vintage</h2>
                     <ul>
-                        <li>People interested in finding unique, historical pieces</li>
+                        <li>You are interested in finding unique, historical pieces</li>
                         <li>Sometimes expensive, sometimes not</li>
+                        <li>You like standing out from mainstream fashion</li>
                     </ul>
                 </div>
             )
@@ -185,9 +188,9 @@ function Quiz({ data }) {
                 <div>
                     <h2>Consignment</h2>
                     <ul>
-                        <li>People looking for curated pieces</li>
-                        <li>Usually more modern</li>
-                        <li>Relatively More Expensive</li>
+                        <li>You are looking for curated pieces</li>
+                        <li>You usually like more modern looks</li>
+                        <li>Relatively more expensive</li>
                     </ul>
                 </div>
             )
