@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import img1 from '../images/quiz-intro-1.png';
 import img2 from '../images/quiz-intro-2.png';
 import img3 from '../images/quiz-intro-3.png';
@@ -16,12 +16,26 @@ function Quiz({ data }) {
     const [showResult, setShowResult] = useState(false);
     const [selectedAnswerIdx, setSelectedAnswerIdx] = useState(null);
     const [started, setStarted] = useState(false);
+    const [shuffledAnswers, setShuffledAnswers] = useState([]);
+
 
     const questions = data.quiz;
     const currentQuestion = questions[activeQuestion];
     const question = currentQuestion ? currentQuestion.question : '';
-    const answers = currentQuestion ? currentQuestion.answers : [];
+    
+    useEffect(() => {
+        if (currentQuestion) {
+            setShuffledAnswers(shuffleArray([...currentQuestion.answers]));
+        }
+    }, [activeQuestion, currentQuestion]);
 
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
 
     function handleNextClick() {
         setResult((prev) => {
@@ -114,7 +128,7 @@ function Quiz({ data }) {
                     <h2>{question}</h2>
                     <p>Choose one of the following</p>
                     <ul>
-                        {answers.map((answer, index) => (
+                        {shuffledAnswers.map((answer, index) => (
                             <li key={answer} onClick={handleAnswerSelected(answer, index)} className={getClassName(index)}>{answer}</li>
                         ))}
                     </ul>
