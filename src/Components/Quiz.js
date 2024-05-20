@@ -127,9 +127,9 @@ function Quiz({ data }) {
         } else {
             return (
                 <div className="quiz-result-container">
-                    <h1>Result</h1>
+                    <h1>Your Best Fit:</h1>
                     <div>
-                        Your Best Fit: <span>{getBestFit()}</span>
+                         <span>{getBestFit()}</span>
                     </div>
                     <button onClick={handleRestart}>Restart Quiz</button>
                 </div>
@@ -144,10 +144,9 @@ function Quiz({ data }) {
                 <div>
                     <h2>Goodwill Bins</h2>
                     <ul>
-                        <li>Likes the process of finding something</li>
-                        <li>People that have experience with thrifting </li>
-                        <li>Doesn’t mind putting in more work </li>
-                        <li>Cheapest option, most time consuming</li>
+                        <li>You like the process of finding something</li>
+                        <li>You have experience with thrifting </li>
+                        <li>Cheapest option but most time consuming</li>
                     </ul>
                 </div>
             )
@@ -157,8 +156,8 @@ function Quiz({ data }) {
                     <h2>Second-Hand</h2>
                     <ul>
                         <li>Good for beginners</li>
-                        <li>People that want affordable options</li>
-                        <li>People that want a traditional store experience, looking thought racks, organized</li>
+                        <li>You want affordable options</li>
+                        <li>You want a traditional store experience where you can look through organized racks</li>
                     </ul>
                 </div>
             )
@@ -167,8 +166,9 @@ function Quiz({ data }) {
                 <div>
                     <h2>Vintage</h2>
                     <ul>
-                        <li>People interested in finding unique, historical pieces</li>
+                        <li>You are interested in finding unique, historical pieces</li>
                         <li>Sometimes expensive, sometimes not</li>
+                        <li>You like standing out from mainstream fashion</li>
                     </ul>
                 </div>
             )
@@ -177,9 +177,9 @@ function Quiz({ data }) {
                 <div>
                     <h2>Consignment</h2>
                     <ul>
-                        <li>People looking for curated pieces</li>
-                        <li>Usually more modern</li>
-                        <li>Relatively More Expensive</li>
+                        <li>You are looking for curated pieces</li>
+                        <li>You usually like more modern looks</li>
+                        <li>Relatively more expensive</li>
                     </ul>
                 </div>
             )

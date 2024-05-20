@@ -7,7 +7,7 @@ import how1 from '../images/about-how-1.png'
 import how2 from '../images/about-how-2.png'
 import abt1 from '../images/about-img-1.png'
 import redef from '../images/about-redef.png'
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube';
 
 function About() {
     const location = useLocation();
@@ -72,7 +72,7 @@ function About() {
                 </div>
             </div>
             <div className="video">
-                <YouTube videoId="CjgWWmgUMa0" />
+                {/* <YouTube videoId="CjgWWmgUMa0" /> */}
             </div>
         </div>
     )
