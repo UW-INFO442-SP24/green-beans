@@ -667,10 +667,10 @@ button {
 
 .quiz-result-container h2 {
     background-color: #F0E5EE;
-    border-radius: 15px; 
+    border-radius: 20px; 
     display: inline-block; 
-    padding: 15px 20px; 
-    margin-top: 10px;
+    padding: 8px 30px; 
+    margin-top: 1px;
     margin-bottom: 40px;
 }
 
@@ -689,7 +689,7 @@ button {
     position: relative;
     background-color: #ffffff; 
     border: 1px solid #ddd; 
-    border-radius: 10px; 
+    border-radius: 20px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px; 
     text-align: center;

@@ -127,7 +127,7 @@ function Quiz({ data }) {
         } else {
             return (
                 <div className="quiz-result-container">
-                    <h1>Your Best Fit:</h1>
+                    <h1>Your Best Fit...</h1>
                     <div>
                          <span>{getBestFit()}</span>
                     </div>
