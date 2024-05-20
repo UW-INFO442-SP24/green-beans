@@ -89,7 +89,7 @@ function Quiz({ data }) {
                         <img src={img1} alt="img1" />
                     </div>
                     <div className="quiz-intro-header">
-                        <h1>DISCOVER YOUR<br/>THRIFT STYLE!</h1>
+                        <h1>DISCOVER YOUR<br />THRIFT STYLE!</h1>
                         <p>Find your ideal stores based on your preferences and personality!</p>
                         <button type="button" onClick={handleStart}>START QUIZ</button>
                     </div>
@@ -110,7 +110,7 @@ function Quiz({ data }) {
                     {/* <h1>Quiz</h1> */}
                     <div className="progress-bar">
                         <div className="progress" style={{ width: `${(activeQuestion + 1) * 10}%` }}></div>
-                        </div>
+                    </div>
                     <h2>{question}</h2>
                     <p>Choose one of the following</p>
                     <ul>
@@ -119,8 +119,8 @@ function Quiz({ data }) {
                         ))}
                     </ul>
                     <div className="button-group">
-                    <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
-                    <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
+                        <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
+                        <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
                     </div>
                 </div>
             )
@@ -128,9 +128,9 @@ function Quiz({ data }) {
             return (
                 <div className="quiz-result-container">
                     <h1>Result</h1>
-                    <p>
+                    <div>
                         Your Best Fit: <span>{getBestFit()}</span>
-                    </p>
+                    </div>
                     <button onClick={handleRestart}>Restart Quiz</button>
                 </div>
             )
