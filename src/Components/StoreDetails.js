@@ -25,7 +25,7 @@ function StoreDetails({ data }) {
             {displayedData.map((store) => (
                 <div className="contentContainer">
                     <h2>{store.store_name}</h2>
-                    <h4 className="location">Location: {store.location}</h4>
+                    <h4 className="location">{store.location}</h4>
                     <div className="tags">
                         <p><span className="tag">{store.price}</span></p>
                         <p><span className="tag">{store.type}</span></p>
