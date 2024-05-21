@@ -357,11 +357,6 @@ button {
     padding: 30px;
 }
 
-/* .about-us-content-banner {
-    display: flex;
-    flex-direction: row;
-} */
-
 .about h1 {
     color: #5C770B;
 }
@@ -390,8 +385,12 @@ button {
 }
 
 /* challenges today section */
+
+.about-challenges {
+    padding-bottom: 15px;
+}
+
 .about-challenges h1 {
-    /* font-size: 60px; */
     padding-top: 2%;
     padding-left: 2%;
 }
@@ -402,6 +401,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 15px;
 }
 
 .about-chal-cards p {
@@ -414,6 +414,9 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 .all-about-chal-cards {
@@ -432,7 +435,6 @@ button {
     text-align: center;
     color: #5C770B;
     width: 100%;
-    /* height: 383px; */
     height: 100%;
     padding: 7% 3%;
 }
@@ -450,7 +452,6 @@ button {
 }
 
 /* redefining style section */
-
 .about-redef {
     display: flex;
     flex-direction: row;
@@ -530,8 +531,13 @@ button {
     flex-direction: column;
     justify-content: space-evenly;
     width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.about-help-cards p {
+    margin: 0px; 
+}
 
 .video-container {
     position: relative;
@@ -856,6 +862,8 @@ header {
     .for-about-redef-button button a {
         font-size: .7rem;
     }
+
+
 }
 
 @media (min-width: 768px) {
@@ -916,6 +924,8 @@ header {
     .for-about-redef-button button a {
         font-size: .8rem;
     }
+
+
 }
 
 @media (min-width: 992px) {
@@ -964,4 +974,9 @@ header {
     .for-about-redef-button button a {
         font-size: 1rem;
     }
+
+    .about-chal-cards p {
+        font-size: 25px;
+    }
+
 }
