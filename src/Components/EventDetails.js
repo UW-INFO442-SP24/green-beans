@@ -25,13 +25,13 @@ function EventDetails({ data }) {
             {displayedData.map((event) => (
                 <div className="contentContainer">
                     <h2>{event.event_name}</h2>
+                    <h4 className="location">{event.location}</h4>
                     <p>{event.description}</p>
-                    <p>location: {event.location}</p>
-                    <p>date: {event.date}</p>
-                    <p>time: {event.time}</p>
+                    <p>Date: {event.date}</p>
+                    <p>Time: {event.time}</p>
                 </div>
             ))}
-            <button onClick={handleClick}>Back</button>
+            <button className="back-button" onClick={handleClick}>Back</button>
         </div>
     );
 }

@@ -25,13 +25,15 @@ function StoreDetails({ data }) {
             {displayedData.map((store) => (
                 <div className="contentContainer">
                     <h2>{store.store_name}</h2>
+                    <h4 className="location">Location: {store.location}</h4>
+                    <div className="tags">
+                        <p><span className="tag">{store.price}</span></p>
+                        <p><span className="tag">{store.type}</span></p>
+                    </div>
                     <p>{store.description}</p>
-                    <p>Location: {store.location}</p>
-                    <p>Price: {store.price}</p>
-                    <p>Type: {store.type}</p>
                 </div>
             ))}
-            <button onClick={handleClick}>Back</button>
+            <button className="back-button" onClick={handleClick}>Back</button>
         </div>
     );
 }

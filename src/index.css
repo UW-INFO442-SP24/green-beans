@@ -826,6 +826,41 @@ header {
     max-width: 35%;
 }
 
+.location {
+    margin-bottom: 35px;
+}
+
+.details p {
+    font-size: 18px;
+}
+
+.back-button {
+    background-color: transparent;
+    border: 2px solid #5C770B;
+    color: #5C770B;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    left: 65px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #EBC9E3;
+    color: #000;
+    padding: 5px 25px;
+    margin-right: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 /* Media */
 @media (min-width: 576px) {
     .homeContainer {
