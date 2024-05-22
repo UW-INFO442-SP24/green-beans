@@ -132,7 +132,7 @@ function Quiz({ data }) {
                         ))}
                     </ul>
                     <div className="button-group">
-                        <button onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
+                        <button className="prev-button" onClick={handlePrevClick} disabled={activeQuestion === 0}>Prev</button>
                         <button onClick={handleNextClick} disabled={selectedAnswerIdx === null}>{changeButtonStatus()}</button>
                     </div>
                 </div>

@@ -715,6 +715,12 @@ button {
     border-radius: 5px;
 }
 
+.prev-button {
+    background-color: transparent;
+    border: 2px solid #434834;
+    color: #434834;
+}
+
 /* Quiz Results */
 .quiz-result-container {
     text-align: center;
