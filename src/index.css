@@ -832,16 +832,23 @@ header {
 
 .details p {
     font-size: 18px;
+    margin-bottom: 35px;
 }
 
 .back-button {
     background-color: transparent;
-    border: 2px solid #5C770B;
-    color: #5C770B;
+    border: 2px solid #434834;
+    color: #434834;
     font-size: 16px;
     position: absolute;
     top: 50px;
     left: 65px;
+}
+
+.visit-button {
+    background-color: #434834;
+    color: #FFFFFF;
+    font-size: 16px;
 }
 
 .tags {
