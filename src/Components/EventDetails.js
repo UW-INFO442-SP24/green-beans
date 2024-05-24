@@ -27,9 +27,12 @@ function EventDetails({ data }) {
                     <h2>{event.event_name}</h2>
                     <h4 className="location">{event.location}</h4>
                     <p>Seattle Neighborhood: {event.neighborhood}</p>
-                    <p>{event.description}</p>
-                    <p>Date: {event.date}</p>
-                    <p>Time: {event.time}</p>
+                    <p><span className="label">DATE:</span> {event.date}</p>
+                    <p><span className="label">TIME:</span> {event.time}</p>
+                    <p>{event.description}</p>  
+
+                    {/* Amazon placeholder website link */}
+                    <button className="visit-button" onClick={() => window.open('https://www.amazon.com', '_blank')}>Visit Website</button>
                 </div>
             ))}
             <button className="back-button" onClick={handleClick}>Back</button>

@@ -878,6 +878,10 @@ header {
     font-weight: bold;
 }
 
+.label {
+    font-weight: bold;
+}
+
 /* Media */
 @media (min-width: 576px) {
     .homeContainer {
