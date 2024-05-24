@@ -168,6 +168,8 @@ button {
 
 .eventCards .card h1 {
     font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
 .eventCards .card .card-content {
@@ -276,6 +278,8 @@ button {
 
 .storeCards .card h1 {
     font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
 .storeCards .card .card-content {

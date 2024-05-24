@@ -26,6 +26,7 @@ function EventDetails({ data }) {
                 <div className="contentContainer">
                     <h2>{event.event_name}</h2>
                     <h4 className="location">{event.location}</h4>
+                    <p>Seattle Neighborhood: {event.neighborhood}</p>
                     <p>{event.description}</p>
                     <p>Date: {event.date}</p>
                     <p>Time: {event.time}</p>
