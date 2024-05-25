@@ -20,25 +20,27 @@ function EventDetails({ data }) {
     }, []);
 
     return (
-        <div className="details">
-            <img src={tempImg} alt="tempImg" />
-            {displayedData.map((event) => (
-                <div className="contentContainer">
-                    <h2>{event.event_name}</h2>
-                    <h4 className="location">{event.location}</h4>
-                    <div className="tags">
-                        <p><span className="tag">{event.type}</span></p>
-                    </div>
-                    <p><span className="label">NEIGHBORHOOD:</span> {event.neighborhood}</p>
-                    <p><span className="label">DATE:</span> {event.date}</p>
-                    <p><span className="label">TIME:</span> {event.time}</p>
-                    <p>{event.description}</p>  
-
-                    {/* Amazon placeholder website link */}
-                    <button className="visit-button" onClick={() => window.open('https://www.amazon.com', '_blank')}>Visit Website</button>
-                </div>
-            ))}
+        <div>
             <button className="back-button" onClick={handleClick}>Back</button>
+            <div className="details">
+                <img src={tempImg} alt="tempImg" />
+                {displayedData.map((event) => (
+                    <div className="contentContainer">
+                        <h2>{event.event_name}</h2>
+                        <h4 className="location">{event.location}</h4>
+                        <div className="tags">
+                            <p><span className="tag">{event.type}</span></p>
+                        </div>
+                        <p><span className="label">NEIGHBORHOOD:</span> {event.neighborhood}</p>
+                        <p><span className="label">DATE:</span> {event.date}</p>
+                        <p><span className="label">TIME:</span> {event.time}</p>
+                        <p className="details-description">{event.description}</p>
+
+                        {/* Amazon placeholder website link */}
+                        <button className="visit-button" onClick={() => window.open('https://www.amazon.com', '_blank')}>Visit Website</button>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
