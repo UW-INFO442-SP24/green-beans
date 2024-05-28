@@ -36,4 +36,12 @@ Thrift Titans is constructed with:
 * Firebase
 
 ## References
-* N/A
+Edelson, S. (2022, October 12). 72% of college students shopped fast fashion in 2022; can thredup change their wasteful ways. Forbes. https://www.forbes.com/sites/sharonedelson/2022/08/25/72-of-college-students-shopped-fast-fashion-in-2022-can-thredup-change-their-wasteful-ways/?sh=399192f835f9
+
+editor, L. (2024, February 16). Environment: Say no to fast fashion. The Seattle Times. https://www.seattletimes.com/opinion/letters-to-the-editor/environment-say-no-to-fast-fashion/
+
+Kelly, D. (2023, April 21). Gen Z and millenials cannot afford to shop sustainably, according to New Study. Hypebeast. https://hypebeast.com/2023/4/generation-gen-z-millenials-cannot-afford-shop-sustainable-enviornmentally-friendly-cost-of-living-crisis-new-study-report
+
+Parks, M. (n.d.). Sustainable fashion at Seattle U Creates Community. The Spectator. https://seattlespectator.com/2022/04/04/sustainable-fashion-at-seattle-u-creates-community/
+
+Stitzhal, D. (n.d.). The Naked Truth About Clothing Waste. Seattle; Seattle Public Utilities
