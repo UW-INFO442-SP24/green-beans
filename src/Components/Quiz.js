@@ -100,7 +100,7 @@ function Quiz({ data }) {
             return (
                 <div className="quiz-intro-container">
                     <div className="top-banner">
-                        <img src={img1} alt="img1" />
+                        <img src={img1} alt="model wearing a white stussy t-shirt" />
                     </div>
                     <div className="quiz-intro-header">
                         <h1>DISCOVER YOUR<br/>THRIFT STYLE!</h1>
@@ -108,13 +108,13 @@ function Quiz({ data }) {
                         <button type="button" onClick={handleStart}>Start Quiz</button>
                     </div>
                     <div className="image-left">
-                        <img src={img2} alt="img2" />
+                        <img src={img2} alt="two models side by side wearing vintage clothing" />
                     </div>
                     <div className="image-right">
-                        <img src={img3} alt="img3" />
+                        <img src={img3} alt="two models side by side wearing vintage clothing" />
                     </div>
                     <div className="bottom-image">
-                        <img src={img4} alt="img4" />
+                        <img src={img4} alt="two models wearing puffer jackets" />
                     </div>
                 </div>
             )
