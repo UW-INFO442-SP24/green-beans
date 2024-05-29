@@ -3,7 +3,7 @@ import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
 import Filter from './Filter';
-import filterNames from '../TempData/filterNames.json'
+import filterNames from '../staticData/filterNames.json'
 
 function CreateCard({ store_id, storeName, storeType, storePrice, storeImg }) {
 

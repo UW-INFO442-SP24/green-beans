@@ -155,6 +155,7 @@ button {
     background: #FEFCF5;
     border-radius: 15px;
     width: 30%;
+    /* height: auto; */
     text-align: center;
     margin: 1% 0;
     display: flex;
@@ -164,16 +165,18 @@ button {
 
 .eventCards .card img {
     border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    height: 45%;
 }
 
 .eventCards .card h1 {
-    font-size: 1rem;
+    font-size: .6rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
 .eventCards .card p {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
 }
 
 .eventCards .card .card-content {
@@ -190,7 +193,7 @@ button {
     width: 100%;
     margin: 0;
     font-weight: lighter;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 5%;
 }
 
@@ -284,13 +287,13 @@ button {
 }
 
 .storeCards .card h1 {
-    font-size: 1rem;
+    font-size: .6rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
 .storeCards .card p {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
 }
 
 .storeCards .card .card-content {
@@ -307,7 +310,7 @@ button {
     width: 100%;
     margin: 0;
     font-weight: lighter;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 5%;
 }
 
@@ -550,8 +553,10 @@ button {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about-help-cards p {
+.about-help-cards button {
     margin: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .about-help-cards-link {
@@ -791,12 +796,16 @@ header {
 }
 
 .details img {
-    height: 50vh;
-    width: auto;
+    /* height: 50vh; */
+    width: 60%;
     margin: 5%;
     margin-top: 1%;
-    border-radius: 15px;
     margin-bottom: 0;
+    border-radius: 15px;
+}
+
+.details h4 {
+    margin-top: 5%;
 }
 
 .address {
@@ -892,7 +901,6 @@ header {
     .storePage .inputs {
         display: flex;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -958,6 +966,11 @@ header {
         font-size: .8rem;
     }
 
+    .about-help-cards button {
+        padding: 20px;
+        font-size: 20px;
+    }
+
     .quiz-result-container li {
         font-size: 1rem;
     }
@@ -977,7 +990,6 @@ header {
     .eventCards .card p {
         font-size: 1rem;
     }
-
 }
 
 @media (min-width: 992px) {

@@ -3,10 +3,9 @@ import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
 import Filter from './Filter';
-import filterNames from '../TempData/filterNames.json'
-import tempbg from '../images/tempbg.png'
+import filterNames from '../staticData/filterNames.json'
 
-function CreateCard({ event_id, eventName, eventLocation, eventDate }) {
+function CreateCard({ event_id, eventName, eventOccurrence, eventDays, eventImg }) {
 
     const navigate = useNavigate();
 
@@ -16,10 +15,10 @@ function CreateCard({ event_id, eventName, eventLocation, eventDate }) {
 
     return (
         <div className="card">
-            <img src={tempbg} alt="tempImg" />
+            <img src={eventImg} alt="event" />
             <div className="card-content">
                 <h1>{eventName}</h1>
-                <p>{eventLocation} | {eventDate}</p>
+                <p>{eventOccurrence} | {eventDays}</p>
             </div>
             <button key={event_id} className="btn btn-primary" onClick={handleClick}>MORE DETAILS</button>
         </div>
@@ -92,7 +91,7 @@ function Events({ data }) {
             <div className="eventCards">
                 {
                     filteredEvents.map(event => (
-                        <CreateCard key={event.event_id} event_id={event.event_id} eventName={event.event_name} eventLocation={event.location} eventDate={event.date} />
+                        <CreateCard key={event.event_id} event_id={event.event_id} eventName={event.event_name} eventOccurrence={event.occurrence} eventDays={event.days} eventImg={event.image} />
                     ))
                 }
 

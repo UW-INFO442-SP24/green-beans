@@ -31,7 +31,7 @@ function StoreDetails({ data }) {
                             <h4 className="address">{store.address} ({store.neighborhood})</h4>
                             <h4 className="address">{store.location}</h4>
                             <div className="tags">
-                                <p><span className="tag">{store.price_range}</span></p>
+                                <p><span className="tag">{store.price}</span></p>
                                 <p><span className="tag">{store.type}</span></p>
                             </div>
                             <p className="details-description">{store.description}</p>
