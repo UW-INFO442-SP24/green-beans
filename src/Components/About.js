@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import chal1 from '../images/about-chal-1.png'
 import chal2 from '../images/about-chal-2.png'
 import chal3 from '../images/about-chal-3.png'
@@ -11,6 +12,7 @@ import YouTube from 'react-youtube';
 
 function About() {
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -63,11 +65,14 @@ function About() {
                 <div className="about-help-card-format">
                     <div className="about-help-cards">
                         <img src={how1} alt="how1" />
-                        <p>Access to Thrift Shop Information</p>
+                        {/* <p>Access to Thrift Shop Information</p> */}
+                        <button onClick={() => navigate("/stores")}>Access to Thrift Shop Information</button>
                     </div>
                     <div className="about-help-cards">
                         <img src={how2} alt="how2" />
-                        <p>Updates About Local Events</p>
+                        {/* <p>Updates About Local Events</p> */}
+                        <button onClick={() => navigate("/events")}>Updates About Local Events</button>
+
                     </div>
                 </div>
             </div>
