@@ -550,8 +550,10 @@ button {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about-help-cards p {
+.about-help-cards button {
     margin: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .about-help-cards-link {
@@ -1021,6 +1023,11 @@ header {
 
     .for-about-redef-button button a {
         font-size: .8rem;
+    }
+
+    .about-help-cards button {
+        padding: 20px;
+        font-size: 20px; 
     }
 
     .quiz-result-container li {
