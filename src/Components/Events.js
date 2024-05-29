@@ -37,7 +37,10 @@ function getFilteredEvents(query, filters, items) {
     Object.keys(filters).forEach(filterName => {
         const filterValue = filters[filterName];
         if (filterValue && filterValue !== filterName) {
-            filteredItems = filteredItems.filter(event => event[filterName.toLowerCase()] === filterValue.toLowerCase());
+            filteredItems = filteredItems.filter(event => {
+                const eventValue = event[filterName.toLowerCase()];
+                return eventValue && eventValue.toLowerCase() === filterValue.toLowerCase();
+            });
         }
     });
 

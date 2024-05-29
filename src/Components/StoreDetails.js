@@ -28,7 +28,7 @@ function StoreDetails({ data }) {
                         <img src={store.image_url} alt="Store" />
                         <div className="contentContainer">
                             <h2>{store.store_name}</h2>
-                            <h4 className="address">{store.location}</h4>
+                            <h4 className="address">{store.address} ({store.neighborhood})</h4>
                             <div className="tags">
                                 <p><span className="tag">{store.price_range}</span></p>
                                 <p><span className="tag">{store.type}</span></p>
