@@ -36,8 +36,9 @@ function EventDetails({ data }) {
                         <p><span className="label">HOURS:</span> {event.hours}</p>
                         <p className="details-description">{event.description}</p>
 
-                        {/* Amazon placeholder website link */}
-                        <button className="visit-button" onClick={() => window.open(event.website, '_blank')}>Visit Website</button>
+                        {event.website !== "No Website" && (
+                            <button className="visit-button" onClick={() => window.open(event.website, '_blank')}>Visit Website</button>
+                        )}
                     </div>
                 ))}
             </div>
