@@ -155,6 +155,7 @@ button {
     background: #FEFCF5;
     border-radius: 15px;
     width: 30%;
+    /* height: auto; */
     text-align: center;
     margin: 1% 0;
     display: flex;
@@ -164,16 +165,18 @@ button {
 
 .eventCards .card img {
     border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    height: 45%;
 }
 
 .eventCards .card h1 {
-    font-size: 1rem;
+    font-size: .6rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
 .eventCards .card p {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
 }
 
 .eventCards .card .card-content {
@@ -190,7 +193,7 @@ button {
     width: 100%;
     margin: 0;
     font-weight: lighter;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 5%;
 }
 
@@ -284,13 +287,13 @@ button {
 }
 
 .storeCards .card h1 {
-    font-size: 1rem;
+    font-size: .6rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
 .storeCards .card p {
-    font-size: 0.8rem;
+    font-size: 0.4rem;
 }
 
 .storeCards .card .card-content {
@@ -307,7 +310,7 @@ button {
     width: 100%;
     margin: 0;
     font-weight: lighter;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 5%;
 }
 
@@ -560,9 +563,9 @@ button {
 
 .about-help-cards-link:hover .about-help-cards {
     filter: brightness(0.85);
-} */
+}
 
-.video-container {
+*/ .video-container {
     position: relative;
     padding-bottom: 56.25%;
     /* 16:9 aspect ratio */
@@ -574,12 +577,12 @@ button {
 }
 
 .video-container iframe {
-    position: absolute; 
-    padding: 50px 100px 75px 100px; 
-    top: 50; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
+    position: absolute;
+    padding: 50px 100px 75px 100px;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -857,12 +860,15 @@ header {
 }
 
 .details img {
-    height: 50vh;
-    width: auto;
+    /* height: 50vh; */
+    width: 60%;
     margin: 5%;
     margin-top: 1%;
     border-radius: 15px;
-    margin-bottom: 0;
+}
+
+.details h4 {
+    margin-top: 5%;
 }
 
 .address {
@@ -957,6 +963,34 @@ header {
 
     .storePage .inputs {
         display: flex;
+    }
+
+    .eventCards .card h1 {
+        font-size: .8rem;
+    }
+
+    .eventCards .card p {
+        font-size: 0.6rem;
+    }
+
+    .eventCards button {
+        font-size: 0.8rem;
+    }
+
+    .storeCards .card h1 {
+        font-size: .8rem;
+    }
+
+    .storeCards .card p {
+        font-size: 0.6rem;
+    }
+
+    .storeCards button {
+        font-size: 0.8rem;
+    }
+
+    .details h4 {
+        margin-top: 3%;
     }
 }
 

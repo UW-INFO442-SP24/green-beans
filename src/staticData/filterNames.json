@@ -20,19 +20,10 @@
     ],
     "events_filter": [
         {
-            "filter_name": "Neighborhood",
+            "filter_name": "Occurrence",
             "filter_options": [
-                "hood A",
-                "hood B",
-                "hood C"
-            ]
-        },
-        {
-            "filter_name": "Time",
-            "filter_options": [
-                "Morning",
-                "Afternoon",
-                "Night"
+                "Recurring",
+                "Annual"
             ]
         }
     ]

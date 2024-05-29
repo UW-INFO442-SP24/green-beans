@@ -23,22 +23,21 @@ function EventDetails({ data }) {
         <div>
             <button className="back-button" onClick={handleClick}>Back</button>
             <div className="details">
-                
+
                 {displayedData.map((event) => (
                     <div className="contentContainer">
                         <h2>{event.event_name}</h2>
-                        <img src={tempImg} alt="tempImg" />
-                        <h4 className="location">{event.location}</h4>
+                        <img src={event.image} alt="event" />
+                        <h4 className="address">{event.address}</h4>
                         <div className="tags">
-                            <p><span className="tag">{event.type}</span></p>
+                            <p><span className="tag">{event.occurrence}</span></p>
                         </div>
-                        <p><span className="label">NEIGHBORHOOD:</span> {event.neighborhood}</p>
-                        <p><span className="label">DATE:</span> {event.date}</p>
-                        <p><span className="label">TIME:</span> {event.time}</p>
+                        <p><span className="label">DAYS:</span> {event.days}</p>
+                        <p><span className="label">HOURS:</span> {event.hours}</p>
                         <p className="details-description">{event.description}</p>
 
                         {/* Amazon placeholder website link */}
-                        <button className="visit-button" onClick={() => window.open('https://www.amazon.com', '_blank')}>Visit Website</button>
+                        <button className="visit-button" onClick={() => window.open(event.website, '_blank')}>Visit Website</button>
                     </div>
                 ))}
             </div>
