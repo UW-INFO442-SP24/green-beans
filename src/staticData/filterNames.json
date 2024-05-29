@@ -4,7 +4,6 @@
             "filter_name": "Price",
             "filter_options": [
                 "$ - $$",
-                "$ - $$$",
                 "$$ - $$$"
             ]
         },
