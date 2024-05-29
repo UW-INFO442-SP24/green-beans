@@ -511,9 +511,9 @@ button {
 }
 
 /* how we help section */
-
 .about-help {
     padding: 2%;
+    flex-direction: row;
 }
 
 .about-help-card-format {
@@ -553,6 +553,14 @@ button {
 .about-help-cards p {
     margin: 0px;
 }
+
+.about-help-cards-link {
+    text-decoration: none;
+}
+
+.about-help-cards-link:hover .about-help-cards {
+    filter: brightness(0.85);
+} */
 
 .video-container {
     position: relative;
