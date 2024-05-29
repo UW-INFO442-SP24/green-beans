@@ -1061,7 +1061,7 @@ header {
 
     .about-help-cards button {
         padding: 20px;
-        font-size: 20px; 
+        font-size: 20px;
     }
 
     .quiz-result-container li {
@@ -1082,6 +1082,11 @@ header {
 
     .eventCards .card p {
         font-size: 1rem;
+    }
+
+    .details img {
+        height: 50vh;
+        width: auto;
     }
 }
 
