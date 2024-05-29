@@ -25,10 +25,15 @@ function StoreDetails({ data }) {
             <div className="details">
                 {displayedData.map((store) => (
                     <div>
+                        <h2>{store.store_name}</h2>
                         <img src={store.image_url} alt="Store" />
                         <div className="contentContainer">
+<<<<<<< HEAD
                             <h2>{store.store_name}</h2>
                             <h4 className="address">{store.address} ({store.neighborhood})</h4>
+=======
+                            <h4 className="address">{store.location}</h4>
+>>>>>>> 568717c8dca34d7f93272cdbff140281eb522c5c
                             <div className="tags">
                                 <p><span className="tag">{store.price_range}</span></p>
                                 <p><span className="tag">{store.type}</span></p>

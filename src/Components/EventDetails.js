@@ -23,10 +23,11 @@ function EventDetails({ data }) {
         <div>
             <button className="back-button" onClick={handleClick}>Back</button>
             <div className="details">
-                <img src={tempImg} alt="tempImg" />
+                
                 {displayedData.map((event) => (
                     <div className="contentContainer">
                         <h2>{event.event_name}</h2>
+                        <img src={tempImg} alt="tempImg" />
                         <h4 className="location">{event.location}</h4>
                         <div className="tags">
                             <p><span className="tag">{event.type}</span></p>

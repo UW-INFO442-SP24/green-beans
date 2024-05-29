@@ -1003,6 +1003,10 @@ header {
         font-size: 2.5rem;
     }
 
+    .about-problem-statement p {
+        font-size: 1.5rem;
+    }
+
     .about-quote-quote {
         font-size: 1.5rem;
     }
