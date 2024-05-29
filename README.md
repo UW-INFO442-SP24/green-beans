@@ -41,6 +41,8 @@ Our user personas can be viewed here: [Thrift Titans User Personas](/thrift-tita
 ## Testing Protocol
 Our entire testing protocol documentation can be viewed here: [Thrift Titans Prototype and Testing Protocol](/prototype-and-testing-protocol.pdf)
 
+Additionally, our unit test specifications can be found here: [Thrift Titans Unit Tests](/unit-tests.pdf)
+
 ## Bugs
 * In the quiz, if a user answers the questions and then clicks the 'Previous' button, any answers they had entered after the current question will not be saved when they click 'Next' again.
 	* Users can reanswer the questions that weren't saved or avoid clicking 'Previous' to ensure their quiz progress is not lost.
