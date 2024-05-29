@@ -22,7 +22,7 @@ function About() {
         <div className="about">
             <div className="about-us">
                 <h1>ABOUT US</h1>
-                <img src={abt1} alt="4 images stacked" />
+                <img src={abt1} alt="stacked effect on an imagage of a woman wearing vintage clothing" />
             </div>
             <div className="about-problem-statement">
                 <p>How might we help budget-conscious Gen Z students in Seattle overcome barriers to second-hand shopping so they can save money, contribute to the environment, and participate in sustainable practices?</p>
@@ -31,15 +31,15 @@ function About() {
                 <h1>Challenges Today</h1>
                 <div className="all-about-chal-cards">
                     <div className="about-chal-cards">
-                        <img src={chal1} alt="chal1" />
+                        <img src={chal1} alt="woman with many shopping bags" />
                         <p>Reliance on Fast Fashion Increases Textile Waste</p>
                     </div>
                     <div className="about-chal-cards">
-                        <img src={chal2} alt="chal2" />
+                        <img src={chal2} alt="woman on her computer with headphones on" />
                         <p>Lack of Awareness & Information on Thrifting</p>
                     </div>
                     <div className="about-chal-cards">
-                        <img src={chal3} alt="chal3" />
+                        <img src={chal3} alt="woman laying down on a pile of clothes" />
                         <p>Social Perceptions Stigmatize Second-Hand Goods</p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ function About() {
                 <p className="about-quote-ref">- Seattle Public Utilities</p>
             </div>
             <div className="about-redef">
-                <img src={redef} alt="redef" />
+                <img src={redef} alt="resuable canvas bag with recylcing symbol" />
                 <div className="for-about-redef-button">
                     <div className="about-redef-content">
                         <h1>Redefining Style</h1>
@@ -64,13 +64,11 @@ function About() {
                 <h1>How We Help</h1>
                 <div className="about-help-card-format">
                     <div className="about-help-cards">
-                        <img src={how1} alt="how1" />
-                        {/* <p>Access to Thrift Shop Information</p> */}
+                        <img src={how1} alt="clothes on clothing racks within a store" />
                         <button onClick={() => navigate("/stores")}>Access to Thrift Shop Information</button>
                     </div>
                     <div className="about-help-cards">
-                        <img src={how2} alt="how2" />
-                        {/* <p>Updates About Local Events</p> */}
+                        <img src={how2} alt="many people at a busy street market" />
                         <button onClick={() => navigate("/events")}>Updates About Local Events</button>
 
                     </div>
