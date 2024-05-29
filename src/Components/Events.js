@@ -3,7 +3,7 @@ import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
 import Filter from './Filter';
-import tempData from '../TempData/temp.json'
+import filterNames from '../TempData/filterNames.json'
 import tempbg from '../images/tempbg.png'
 
 function CreateCard({ event_id, eventName, eventLocation, eventDate }) {
@@ -78,7 +78,7 @@ function Events({ data }) {
                 <Search setQuery={setQuery} data={data} />
 
                 <div className="filters">
-                    {tempData.events_filter.map((e) => {
+                    {filterNames.events_filter.map((e) => {
                         return (
                             <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} />
                         )

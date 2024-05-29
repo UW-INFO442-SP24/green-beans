@@ -3,10 +3,9 @@ import Search from './Search';
 import { useNavigate } from "react-router-dom";
 
 import Filter from './Filter';
-import tempData from '../TempData/temp.json'
-import tempbg from '../images/tempbg.png'
+import filterNames from '../TempData/filterNames.json'
 
-function CreateCard({ store_id, storeName, storeType, storePrice }) {
+function CreateCard({ store_id, storeName, storeType, storePrice, storeImg }) {
 
     const navigate = useNavigate();
 
@@ -16,7 +15,7 @@ function CreateCard({ store_id, storeName, storeType, storePrice }) {
 
     return (
         <div className="card">
-            <img src={tempbg} alt="tempImg" />
+            <img src={storeImg} alt="store" />
             <div className="card-content">
                 <h1>{storeName}</h1>
                 <p>{storePrice} | {storeType}</p>
@@ -37,12 +36,16 @@ function getFilteredStores(query, filters, items) {
     Object.keys(filters).forEach(filterName => {
         const filterValue = filters[filterName];
         if (filterValue && filterValue !== filterName) {
-            filteredItems = filteredItems.filter(store => store[filterName.toLowerCase()] === filterValue);
+            filteredItems = filteredItems.filter(store => {
+                const storeValue = store[filterName.toLowerCase()];
+                return storeValue && storeValue.toLowerCase() === filterValue.toLowerCase();
+            });
         }
     });
 
     return filteredItems;
 }
+
 
 function Stores({ data }) {
     // for search
@@ -78,7 +81,7 @@ function Stores({ data }) {
                 <Search setQuery={setQuery} data={data} />
 
                 <div className="filters">
-                    {tempData.stores_filter.map((e) => {
+                    {filterNames.stores_filter.map((e) => {
                         return (
                             <Filter key={e.filter_name} filter_name={e.filter_name} filter_options={e.filter_options} onFilterChange={handleFilterChange} setFilters={setFilters} />
                         )
@@ -89,7 +92,7 @@ function Stores({ data }) {
             <div className="storeCards">
                 {
                     filteredStores.map(store => (
-                        <CreateCard key={store.store} store_id={store.store_id} storeName={store.store_name} storeType={store.type} storePrice={store.price} />
+                        <CreateCard key={store.store} store_id={store.store_id} storeName={store.store_name} storeType={store.type} storePrice={store.price_range} storeImg={store.image_url} />
                     ))
                 }
 
