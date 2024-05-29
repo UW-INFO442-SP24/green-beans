@@ -24,7 +24,7 @@ function StoreDetails({ data }) {
             <button className="back-button" onClick={handleClick}>Back</button>
             <div className="details">
                 {displayedData.map((store) => (
-                    <div>
+                    <div key={store.store_id}>
                         <h2>{store.store_name}</h2>
                         <img src={store.image_url} alt="Store" />
                         <div className="contentContainer">
@@ -35,7 +35,9 @@ function StoreDetails({ data }) {
                                 <p><span className="tag">{store.type}</span></p>
                             </div>
                             <p className="details-description">{store.description}</p>
-                            <button className="visit-button" onClick={() => window.open(store.Website, '_blank')}>Visit Website</button>
+                            {store.Website !== "No Website" && (
+                                <button className="visit-button" onClick={() => window.open(store.Website, '_blank')}>Visit Website</button>
+                            )}
                         </div>
                     </div>
                 ))}
