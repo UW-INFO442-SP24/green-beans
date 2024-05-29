@@ -47,6 +47,7 @@ function getFilteredStores(query, filters, items) {
 }
 
 
+
 function Stores({ data }) {
     // for search
     const [query, setQuery] = useState("");
@@ -92,7 +93,7 @@ function Stores({ data }) {
             <div className="storeCards">
                 {
                     filteredStores.map(store => (
-                        <CreateCard key={store.store} store_id={store.store_id} storeName={store.store_name} storeType={store.type} storePrice={store.price_range} storeImg={store.image_url} />
+                        <CreateCard key={store.store} store_id={store.store_id} storeName={store.store_name} storeType={store.type} storePrice={store.price} storeImg={store.image_url} />
                     ))
                 }
 

@@ -1,7 +1,7 @@
-.page-container {
-    /* position: relative; */
-    /* min-height: 100vh; */
-}
+/* .page-container {
+    position: relative;
+    min-height: 100vh;
+} */
 
 /* Global styling for Mobile (less than 598px) devices */
 
@@ -560,9 +560,9 @@ button {
 
 .about-help-cards-link:hover .about-help-cards {
     filter: brightness(0.85);
-} */
+}
 
-.video-container {
+*/ .video-container {
     position: relative;
     padding-bottom: 56.25%;
     /* 16:9 aspect ratio */
