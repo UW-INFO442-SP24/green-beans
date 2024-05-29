@@ -269,7 +269,7 @@ button {
     background: #FEFCF5;
     border-radius: 15px;
     width: 30%;
-    /* height: 50%; */
+    /* height: auto; */
     text-align: center;
     margin: 1% 0;
     display: flex;
@@ -1055,6 +1055,14 @@ header {
 
     .storeCards {
         margin: 2rem 6rem;
+    }
+
+    .storeCards .card h1 {
+        font-size: 1.5rem;
+    }
+
+    .storeCards .card p {
+        font-size: 1.2rem;
     }
 
     .storePage .inputs {
