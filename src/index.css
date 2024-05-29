@@ -901,6 +901,22 @@ header {
     .storePage .inputs {
         display: flex;
     }
+
+    .storeCards .card h1 {
+        font-size: 1rem;
+    }
+
+    .eventCards .card h1 {
+        font-size: 1rem;
+    }
+
+    .storeCards .card p {
+        font-size: .8rem;
+    }
+
+    .eventCards .card p {
+        font-size: .8rem;
+    }
 }
 
 @media (min-width: 768px) {
