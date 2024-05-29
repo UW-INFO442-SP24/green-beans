@@ -25,9 +25,9 @@ function StoreDetails({ data }) {
             <div className="details">
                 {displayedData.map((store) => (
                     <div>
+                        <h2>{store.store_name}</h2>
                         <img src={store.image_url} alt="Store" />
                         <div className="contentContainer">
-                            <h2>{store.store_name}</h2>
                             <h4 className="address">{store.location}</h4>
                             <div className="tags">
                                 <p><span className="tag">{store.price_range}</span></p>
