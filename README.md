@@ -36,7 +36,7 @@ Thrift Titans is constructed with:
 * Firebase
 
 ## User Personas
-Our user personas can be viewed here: [Thrift Titans User Personas](https://info442-green-beans.web.app/)
+Our user personas can be viewed here: [Thrift Titans User Personas](/thrift-titans.pdf)
 
 ## Testing Protocol
 | Feature                          | Requirement Specification                                                                                                                                                                                                                                                                                                                                                              | Testing Cases                                                        | Expected Results                                                                                                                                                                                                                                                                                                             | Expected Deficiency                                                               | Unexpected Results                                                                                                                                                                                                                                                                                                                                                                 |
