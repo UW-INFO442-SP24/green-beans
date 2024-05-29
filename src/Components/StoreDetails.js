@@ -34,9 +34,7 @@ function StoreDetails({ data }) {
                                 <p><span className="tag">{store.type}</span></p>
                             </div>
                             <p className="details-description">{store.description}</p>
-
-                            {/* Amazon placeholder website link */}
-                            <button className="visit-button" onClick={() => window.open(store.website, '_blank')}>Visit Website</button>
+                            <button className="visit-button" onClick={() => window.open(store.Website, '_blank')}>Visit Website</button>
                         </div>
                     </div>
                 ))}
