@@ -910,6 +910,14 @@ header {
         font-size: 1rem;
     }
 
+    .eventCards button {
+        font-size: .8rem;
+    }
+
+    .storeCards button {
+        font-size: .8rem;
+    }
+
     .storeCards .card p {
         font-size: .8rem;
     }
@@ -997,6 +1005,14 @@ header {
 
     .eventCards .card h1 {
         font-size: 1.3rem;
+    }
+
+    .eventCards button {
+        font-size: 1rem;
+    }
+
+    .storeCards button {
+        font-size: 1rem;
     }
 
     .storeCards .card p {
