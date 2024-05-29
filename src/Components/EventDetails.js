@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import tempImg from '../images/tempbg.png'
 import { useNavigate } from "react-router-dom";
 
 function EventDetails({ data }) {
